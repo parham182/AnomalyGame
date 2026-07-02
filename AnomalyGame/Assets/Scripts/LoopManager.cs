@@ -4,8 +4,11 @@ using UnityEngine;
 public class LoopManager : MonoBehaviour
 {
     public static LoopManager instance; // singleton
-    public List<BaseAnomaly> anomalies;
-    public List<int> anomalyGroups;
+    [Header("Floor")]
+    public List<Floor> anomalies;
+    public Floor defaultFloor;
+    public Floor prevFloor = null;
+
     [Header("Room")]
     public int currentRoom = 7;
     const int startRoom = 7;
@@ -39,28 +42,35 @@ public class LoopManager : MonoBehaviour
         }
     }
 
-    public void SpawnLevel()
+    public void GenerateNextFloor()
     {
+        // disable prev floor
+        prevFloor.DisableFloor();
+
         if (IsAnomaly()) // spawn a anomaly level
         {
             SpawnAnomaly();
         } else // spawn default level
         {
-            
+            defaultFloor.EnableFloor();
+            prevFloor = defaultFloor;
         }
+    }
+
+    public void GenerateCurrentFloor()
+    {
+        // do nothing
     }
 
     private void SpawnAnomaly()
     {
-        int randIndex = Random.Range(0, anomalyGroups.Count); // select an anomaly group randomly to spawn(enable)
-        foreach(BaseAnomaly anomaly in anomalies)
-        {
-            if (anomaly.anomalyGroupID == anomalyGroups[randIndex]) // this anomaly is in the slected group
-            {
-                anomaly.Instantiate();
-            }
-        }
+        int randIndex = Random.Range(0, anomalies.Count); // select an anomaly group randomly to spawn(enable)
+
+        // enable selected anomaly
+        anomalies[randIndex].EnableFloor();
+        prevFloor = anomalies[randIndex];
+        
         // delete spawned anomaly group in list to prevent spawn a spawned anomaly
-        anomalyGroups.RemoveAt(randIndex);
+        anomalies.RemoveAt(randIndex);
     }
 }
