@@ -71,20 +71,13 @@ public class PlayerMovement : MonoBehaviour
     private void playerMove()
     {
         if (!canMove) return;
+        
+        Vector3 camForward = Quaternion.Euler(0, cam.eulerAngles.y, 0) * Vector3.forward;
+        Vector3 camRight = Quaternion.Euler(0, cam.eulerAngles.y, 0) * Vector3.right;
 
-        Vector3 forward = cam.forward;
-        Vector3 right = cam.right;
+        Vector3 moveDir = camRight * moveInput.x + camForward * moveInput.y;
 
-        forward.y = 0f;
-        right.y = 0f;
-
-        forward.Normalize();
-        right.Normalize();
-
-        Vector3 direction = right * moveInput.x + forward * moveInput.y;
-
-        Vector3 move = direction * moveSpeed * Time.deltaTime;
-        controller.Move(move);
+        controller.Move(moveDir * moveSpeed * Time.deltaTime);
 
         velocity.y += gravity * Time.deltaTime;
         Vector3 finalMove = velocity * Time.deltaTime;
