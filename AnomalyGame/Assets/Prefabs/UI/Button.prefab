@@ -149,6 +149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomButton
   buttonAnimator: {fileID: 6966270454360002424}
+  hoverClip: {fileID: 8300000, guid: 46782ab479a764742b5eb819f0ad5e00, type: 3}
+  clickClip: {fileID: 8300000, guid: d1cb0d9ec799d32498c0db018c8c510f, type: 3}
   onClick:
     m_PersistentCalls:
       m_Calls: []

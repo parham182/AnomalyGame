@@ -4,17 +4,23 @@ using UnityEngine.EventSystems;
 
 public class CustomButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
-    public Animator buttonAnimator;
-    public UnityEvent onClick;
+    [SerializeField] private Animator buttonAnimator;
+    [Header("Sound Effects")]
+    [SerializeField] private AudioClip hoverClip;
+    [SerializeField] private AudioClip clickClip;
+
+    [SerializeField] private UnityEvent onClick;
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        UISound.instance.PlaySound(clickClip);
         onClick?.Invoke();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         buttonAnimator.SetBool("IsHovering", true);
+        UISound.instance.PlaySound(hoverClip);
     }
 
     public void OnPointerExit(PointerEventData eventData)
