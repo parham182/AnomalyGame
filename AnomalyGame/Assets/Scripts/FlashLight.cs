@@ -4,7 +4,8 @@ using UnityEngine.InputSystem;
 public class FlashLight : MonoBehaviour
 {
     [SerializeField] InputActionReference flashlightToggel;
-
+    [SerializeField] AudioSource audioSource;
+    
     Light flashlight;
     bool isFlashLightOn;
 

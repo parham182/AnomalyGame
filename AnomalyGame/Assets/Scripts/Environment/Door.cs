@@ -5,9 +5,16 @@ using UnityEngine;
 
 public class Door : MonoBehaviour, IInteractable
 {
+    [Header("value")]
     [SerializeField] float doorOpenSpeed = 5f;
     [SerializeField] float targetAngle = -90f;
     [SerializeField] GameObject piviot;
+    [Header("Sound")]
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip opendoor;
+    [SerializeField] AudioClip closedoor;
+    
+    
     Quaternion closedRot;
     Quaternion openRot;
 
