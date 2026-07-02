@@ -72,12 +72,16 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!canMove) return;
 
-        Vector3 forward = cam.transform.forward;
-        Vector3 right = cam.transform.right;
+        Vector3 forward = cam.forward;
+        Vector3 right = cam.right;
+
         forward.y = 0f;
         right.y = 0f;
 
-        Vector3 direction = (right * moveInput.x + forward * moveInput.y);
+        forward.Normalize();
+        right.Normalize();
+
+        Vector3 direction = right * moveInput.x + forward * moveInput.y;
 
         Vector3 move = direction * moveSpeed * Time.deltaTime;
         controller.Move(move);
