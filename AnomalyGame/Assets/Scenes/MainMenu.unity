@@ -199,7 +199,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3986310144310028404, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
       propertyPath: m_Name
-      value: Button (1)
+      value: OptionsButton
       objectReference: {fileID: 0}
     - target: {fileID: 4763266120698710190, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
       propertyPath: m_Pivot.x
@@ -280,6 +280,10 @@ PrefabInstance:
     - target: {fileID: 4763266120698710190, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835482693167726213, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: m_text
+      value: Options
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -296,7 +300,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3986310144310028404, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
       propertyPath: m_Name
-      value: Button (2)
+      value: StartButton
       objectReference: {fileID: 0}
     - target: {fileID: 4763266120698710190, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
       propertyPath: m_Pivot.x
@@ -378,16 +382,68 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4835482693167726213, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: m_text
+      value: Start
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290265323985437571, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290265323985437571, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290265323985437571, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 863472187}
+    - target: {fileID: 6290265323985437571, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290265323985437571, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290265323985437571, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: StartButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290265323985437571, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3986310144310028404, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 863472187}
   m_SourcePrefab: {fileID: 100100000, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+--- !u!1 &863472183 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3986310144310028404, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+  m_PrefabInstance: {fileID: 838898392}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &863472184 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4763266120698710190, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
   m_PrefabInstance: {fileID: 838898392}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &863472187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863472183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44c53a220b8629e4bbcbbf8a42f121a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StartButton
 --- !u!1 &892032017
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,7 +456,8 @@ GameObject:
   - component: {fileID: 892032021}
   - component: {fileID: 892032020}
   - component: {fileID: 892032019}
-  - component: {fileID: 892032018}
+  - component: {fileID: 892032024}
+  - component: {fileID: 892032023}
   m_Layer: 5
   m_Name: Splash Canvas
   m_TagString: Untagged
@@ -408,24 +465,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!111 &892032018
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 892032017}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Animation: {fileID: 0}
-  m_Animations:
-  - {fileID: 7400000, guid: e1608ed39bfb1ce498c6729207f9824d, type: 2}
-  - {fileID: 7400000, guid: 3e2b0176cd9de6b4e888dc294e3e532a, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_UpdateMode: 0
-  m_CullingType: 0
 --- !u!114 &892032019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -487,7 +526,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1000
   m_TargetDisplay: 0
 --- !u!224 &892032022
 RectTransform:
@@ -509,6 +548,42 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &892032023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892032017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14f2ee709a82ab74e935747d3f8916c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneController
+  animator: {fileID: 892032024}
+  changeSceneClip: {fileID: 8300000, guid: 0118c14981cca9141a5d35ae4f7cb886, type: 3}
+--- !u!95 &892032024
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892032017}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d654735cba6903c4e93a869224ffde51, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1110281137
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,7 +634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1020,6 +1095,7 @@ GameObject:
   - component: {fileID: 2146531980}
   - component: {fileID: 2146531979}
   - component: {fileID: 2146531978}
+  - component: {fileID: 2146531981}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1101,6 +1177,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2146531981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146531977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
 --- !u!1001 &8619957623079587212
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1111,7 +1231,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3986310144310028404, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
       propertyPath: m_Name
-      value: Button
+      value: ExitButton
       objectReference: {fileID: 0}
     - target: {fileID: 4763266120698710190, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
       propertyPath: m_Pivot.x
@@ -1193,6 +1313,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4835482693167726213, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: m_text
+      value: Exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290265323985437571, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290265323985437571, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290265323985437571, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290265323985437571, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290265323985437571, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290265323985437571, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: StartButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290265323985437571, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1204,6 +1356,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 2146531980}
   - {fileID: 1393449049}
+  - {fileID: 892032022}
   - {fileID: 1405813574}
   - {fileID: 1340142405}
-  - {fileID: 892032022}

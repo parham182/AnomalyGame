@@ -12,7 +12,7 @@ public class SceneController : MonoBehaviour
     public void StartAnimation()
     {
         animator.SetTrigger("LightToDark");
-        UISound.instance.PlaySound(changeSceneClip);
+        UISound.instance.PlaySound(changeSceneClip, 1);
     }
 
     public void LoadMainScene()
