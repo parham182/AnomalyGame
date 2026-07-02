@@ -20,7 +20,7 @@ public class CustomButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public void OnPointerEnter(PointerEventData eventData)
     {
         buttonAnimator.SetBool("IsHovering", true);
-        UISound.instance.PlaySound(hoverClip, 6);
+        UISound.instance.PlaySound(hoverClip, 0.6f);
     }
 
     public void OnPointerExit(PointerEventData eventData)
