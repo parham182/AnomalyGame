@@ -285,6 +285,34 @@ PrefabInstance:
       propertyPath: m_text
       value: Options
       objectReference: {fileID: 0}
+    - target: {fileID: 4835482693167726213, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: m_fontSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835482693167726213, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 500c503d8e6a404f68df24fa5f9ad514, type: 2}
+    - target: {fileID: 4835482693167726213, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835482693167726213, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 1317530030327958754, guid: 500c503d8e6a404f68df24fa5f9ad514, type: 2}
+    - target: {fileID: 4835482693167726213, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290265323985437571, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: clickClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0d05280a7d73309ae903fa7362483172, type: 3}
+    - target: {fileID: 6290265323985437571, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: hoverClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b19c6be9ac2ecd41cb46fe71c7b82848, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -386,6 +414,34 @@ PrefabInstance:
       propertyPath: m_text
       value: Start
       objectReference: {fileID: 0}
+    - target: {fileID: 4835482693167726213, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: m_fontSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835482693167726213, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 500c503d8e6a404f68df24fa5f9ad514, type: 2}
+    - target: {fileID: 4835482693167726213, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835482693167726213, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 1317530030327958754, guid: 500c503d8e6a404f68df24fa5f9ad514, type: 2}
+    - target: {fileID: 4835482693167726213, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290265323985437571, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: clickClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0d05280a7d73309ae903fa7362483172, type: 3}
+    - target: {fileID: 6290265323985437571, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: hoverClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b19c6be9ac2ecd41cb46fe71c7b82848, type: 3}
     - target: {fileID: 6290265323985437571, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1317,6 +1373,34 @@ PrefabInstance:
       propertyPath: m_text
       value: Exit
       objectReference: {fileID: 0}
+    - target: {fileID: 4835482693167726213, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: m_fontSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835482693167726213, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 500c503d8e6a404f68df24fa5f9ad514, type: 2}
+    - target: {fileID: 4835482693167726213, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835482693167726213, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 1317530030327958754, guid: 500c503d8e6a404f68df24fa5f9ad514, type: 2}
+    - target: {fileID: 4835482693167726213, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290265323985437571, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: clickClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0d05280a7d73309ae903fa7362483172, type: 3}
+    - target: {fileID: 6290265323985437571, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
+      propertyPath: hoverClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b19c6be9ac2ecd41cb46fe71c7b82848, type: 3}
     - target: {fileID: 6290265323985437571, guid: 5fe1539af74e8a1499849f278e1ac98a, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.size
       value: 0
