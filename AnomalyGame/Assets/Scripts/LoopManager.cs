@@ -1,0 +1,66 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+public class LoopManager : MonoBehaviour
+{
+    public static LoopManager instance; // singleton
+    public List<BaseAnomaly> anomalies;
+    public List<int> anomalyGroups;
+    [Header("Room")]
+    public int currentRoom = 7;
+    const int startRoom = 7;
+    private int normalRooms = 0;
+
+    private void Awake()
+    {
+        instance = this; // singleton
+    }
+
+    private bool IsAnomaly() // we call this before spawn a room to know new room is anoaly or not
+    {
+        float chance = 0.25f + (normalRooms * 0.1f);
+        chance = Mathf.Min(chance, 1f); // if number is bigger than 1 return 1
+        bool anomaly = Random.value < chance;
+
+        if (anomaly) normalRooms = 0;
+        else normalRooms += 1;
+
+        return anomaly;
+    }
+
+    public void LevelCheck() // check player pased right way or no
+    {
+        if (true) // player pased right way
+        {
+            currentRoom -= 1;
+        } else // player pased wrong way
+        {
+            // currentRoom = startRoom;
+        }
+    }
+
+    public void SpawnLevel()
+    {
+        if (IsAnomaly()) // spawn a anomaly level
+        {
+            SpawnAnomaly();
+        } else // spawn default level
+        {
+            
+        }
+    }
+
+    private void SpawnAnomaly()
+    {
+        int randIndex = Random.Range(0, anomalyGroups.Count); // select an anomaly group randomly to spawn(enable)
+        foreach(BaseAnomaly anomaly in anomalies)
+        {
+            if (anomaly.anomalyGroupID == anomalyGroups[randIndex]) // this anomaly is in the slected group
+            {
+                anomaly.Instantiate();
+            }
+        }
+        // delete spawned anomaly group in list to prevent spawn a spawned anomaly
+        anomalyGroups.RemoveAt(randIndex);
+    }
+}
