@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 5f;
-    [SerializeField] Transform camera;
+    [SerializeField] Transform cam;
     [SerializeField] float gravity = -20f;
     private CharacterController controller;
 
@@ -33,8 +33,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!canMove) return;
         
-        Vector3 forward = camera.transform.forward;
-        Vector3 right = camera.transform.right;
+        Vector3 forward = cam.transform.forward;
+        Vector3 right = cam.transform.right;
         forward.y = 0f;
         right.y = 0f;
 

@@ -1,8 +1,7 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class CameraMovement : MonoBehaviour
+public class CameraRotation : MonoBehaviour
 {
     public InputActionReference mouse;
     [SerializeField] float sensitivity = 120f;
@@ -78,5 +77,4 @@ public class CameraMovement : MonoBehaviour
             playerBody.localRotation = Quaternion.Euler(0f, yRotation, 0f);
         }
     }
-
 }

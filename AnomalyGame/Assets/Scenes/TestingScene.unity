@@ -738,7 +738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   moveSpeed: 5
-  camera: {fileID: 330585546}
+  cam: {fileID: 0}
   gravity: -20
   canMove: 1
 --- !u!114 &739973174
@@ -1000,9 +1000,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1355101293}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 335e10ad0064069f68a948242281dce2, type: 3}
+  m_Script: {fileID: 11500000, guid: 86778107e1b69d346b38726490c0f14a, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CameraMovement
+  m_EditorClassIdentifier: Assembly-CSharp::CameraRotation
   mouse: {fileID: -5748826299980179748, guid: 48c841f907e20177b80d750fff796888, type: 3}
   sensitivity: 10
   playerBody: {fileID: 739973172}
