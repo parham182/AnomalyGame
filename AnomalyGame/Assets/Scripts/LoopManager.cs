@@ -4,6 +4,7 @@ using UnityEngine;
 public class LoopManager : MonoBehaviour
 {
     public static LoopManager instance; // singleton
+
     [Header("Floor")]
     public List<Floor> anomalies;
     public Floor defaultFloor;
@@ -21,7 +22,7 @@ public class LoopManager : MonoBehaviour
 
     private bool IsAnomaly() // we call this before spawn a room to know new room is anoaly or not
     {
-        float chance = 0.25f + (normalRooms * 0.1f);
+        float chance = 0.30f + (normalRooms * 0.1f);
         chance = Mathf.Min(chance, 1f); // if number is bigger than 1 return 1
         bool anomaly = Random.value < chance;
 
@@ -69,8 +70,5 @@ public class LoopManager : MonoBehaviour
         // enable selected anomaly
         anomalies[randIndex].EnableFloor();
         prevFloor = anomalies[randIndex];
-        
-        // delete spawned anomaly group in list to prevent spawn a spawned anomaly
-        anomalies.RemoveAt(randIndex);
     }
 }
