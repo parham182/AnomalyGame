@@ -6,6 +6,7 @@ public class FlashLight : MonoBehaviour
     [SerializeField] InputActionReference flashlightToggel;
     [SerializeField] AudioSource audioSource;
     
+    public bool hasFlashLight = false;
     Light flashlight;
     bool isFlashLightOn;
 
@@ -18,15 +19,17 @@ public class FlashLight : MonoBehaviour
         flashlightToggel.action.Disable();
     }
 
-
     void Start()
     {
-        flashlight = GetComponent<Light>();    
+        flashlight = GetComponent<Light>();
+        isFlashLightOn = false;
+        flashlight.enabled = isFlashLightOn;
     }
-
 
     void Update()
     {
+        if (hasFlashLight == false) return;
+
         if (flashlightToggel.action.WasCompletedThisFrame())
         {
             isFlashLightOn = !isFlashLightOn;
