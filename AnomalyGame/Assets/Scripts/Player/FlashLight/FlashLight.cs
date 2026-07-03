@@ -5,6 +5,8 @@ public class FlashLight : MonoBehaviour
 {
     [SerializeField] InputActionReference flashlightToggel;
     [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip onClip;
+    [SerializeField] AudioClip offClip;
     
     public bool hasFlashLight = false;
     Light flashlight;
@@ -34,6 +36,10 @@ public class FlashLight : MonoBehaviour
         {
             isFlashLightOn = !isFlashLightOn;
             flashlight.enabled = isFlashLightOn;
+
+            audioSource.pitch = Random.Range(0.9f, 1.1f);
+            if (isFlashLightOn) audioSource.PlayOneShot(onClip);
+            else audioSource.PlayOneShot(offClip);
         }
     }
 }
