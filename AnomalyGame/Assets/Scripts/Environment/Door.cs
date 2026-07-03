@@ -1,6 +1,3 @@
-using System;
-using NUnit.Framework;
-using Unity.Mathematics;
 using UnityEngine;
 
 public class Door : MonoBehaviour, IInteractable
@@ -13,8 +10,9 @@ public class Door : MonoBehaviour, IInteractable
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip opendoor;
     [SerializeField] AudioClip closedoor;
-    
-    
+
+
+
     Quaternion closedRot;
     Quaternion openRot;
 
@@ -23,23 +21,32 @@ public class Door : MonoBehaviour, IInteractable
     void Start()
     {
         closedRot = piviot.transform.rotation;
-        openRot = quaternion.Euler(0, targetAngle, 0);
+        openRot = Quaternion.Euler(0f, targetAngle, 0f);
     }
 
     public void Interact()
     {
         isOpen = !isOpen;
+
+        audioSource.pitch = Random.Range(0.6f, 1f);
+
+        if (isOpen)
+            audioSource.PlayOneShot(opendoor);
+        else
+            audioSource.PlayOneShot(closedoor);
     }
 
     void Update()
     {
+        
+
         DoorHandeler();
     }
 
     void DoorHandeler()
     {
         Quaternion target = isOpen ? openRot : closedRot;
-
+        Debug.Log(target);
         piviot.transform.rotation = Quaternion.Slerp(piviot.transform.rotation, target, doorOpenSpeed * Time.deltaTime);
     }
 }

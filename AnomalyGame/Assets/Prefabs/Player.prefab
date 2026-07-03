@@ -190,10 +190,10 @@ GameObject:
   - component: {fileID: 8523259228117105516}
   - component: {fileID: 7320151333194687632}
   - component: {fileID: 4523996093286571220}
+  - component: {fileID: 2139401515075037549}
   - component: {fileID: 2265244142809557906}
   - component: {fileID: 3473524326635694678}
   - component: {fileID: 6259604082540436429}
-  - component: {fileID: 2139401515075037549}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -297,6 +297,22 @@ MonoBehaviour:
   walkVolumeChangeInterval: 0.25
   gravity: -20
   canMove: 1
+--- !u!114 &2139401515075037549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5724890259080517920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52dd6502422212bafa87c0f1efda05af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteract
+  interactButton: {fileID: 492844565862402382, guid: 48c841f907e20177b80d750fff796888, type: 3}
+  playerCamera: {fileID: 560115367931379969}
+  interactDistance: 5
+  intarctCircleUi: {fileID: 0}
 --- !u!136 &2265244142809557906
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -375,21 +391,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2139401515075037549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5724890259080517920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52dd6502422212bafa87c0f1efda05af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteract
-  interactButton: {fileID: 492844565862402382, guid: 48c841f907e20177b80d750fff796888, type: 3}
-  playerCamera: {fileID: 560115367931379969}
-  interactDistance: 5
 --- !u!1 &6567066072598941129
 GameObject:
   m_ObjectHideFlags: 0
