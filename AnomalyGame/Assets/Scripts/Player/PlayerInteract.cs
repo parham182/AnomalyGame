@@ -8,6 +8,7 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private Camera playerCamera;
     [SerializeField] private float interactDistance = 3f;
     [SerializeField] GameObject interactCircleUi;
+    [SerializeField] GameObject interactCircleUiButton;
 
     bool isIntract = false;
     void OnEnable()
@@ -29,17 +30,19 @@ public class PlayerInteract : MonoBehaviour
             if (hit.collider.TryGetComponent<IInteractable>(out var interactable))
             {
                 interactCircleUi.SetActive(true);
-                
+                interactCircleUiButton.SetActive(true);
+
                 if (interactButton.action.WasPressedThisFrame())
                 {
                     interactable.Interact();
                 }
             }
-            else{interactCircleUi.SetActive(false);}
+            else{interactCircleUi.SetActive(false); interactCircleUiButton.SetActive(false); }
         }
         else
         {
             interactCircleUi.SetActive(false);
+            interactCircleUiButton.SetActive(false);
         }
     }
 }

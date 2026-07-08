@@ -7,7 +7,8 @@ public class FlashLight : MonoBehaviour
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip onClip;
     [SerializeField] AudioClip offClip;
-    
+    [SerializeField] GameObject flashLightButtonUi;
+
     public bool hasFlashLight = false;
     Light flashlight;
     bool isFlashLightOn;
@@ -29,7 +30,8 @@ public class FlashLight : MonoBehaviour
     }
 
     void Update()
-    {
+    {   
+        flashLightButtonUi.SetActive(hasFlashLight);
         if (hasFlashLight == false) return;
 
         if (flashlightToggel.action.WasCompletedThisFrame())
