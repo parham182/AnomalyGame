@@ -17,7 +17,6 @@ public class NpcMovement : MonoBehaviour
 
     void Update()
     {
-
         if (normalTarget != null )
         {
             navMeshAgent.isStopped = isStop;

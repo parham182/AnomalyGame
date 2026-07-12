@@ -38,15 +38,12 @@ public class Door : MonoBehaviour, IInteractable
 
     void Update()
     {
-        
-
         DoorHandeler();
     }
 
     void DoorHandeler()
     {
         Quaternion target = isOpen ? openRot : closedRot;
-        Debug.Log(target);
         piviot.transform.rotation = Quaternion.Slerp(piviot.transform.rotation, target, doorOpenSpeed * Time.deltaTime);
     }
 }
