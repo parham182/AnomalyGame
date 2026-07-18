@@ -1,132 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2005842111416149234
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3760579387713858579}
-  - component: {fileID: 8096770207718831703}
-  - component: {fileID: 5554550543206129743}
-  m_Layer: 0
-  m_Name: PlayerLight
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3760579387713858579
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2005842111416149234}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.9914449, z: -0, w: -0.1305263}
-  m_LocalPosition: {x: -0.09401188, y: -0.781, z: 0.3796028}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8518254572057292471}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!108 &8096770207718831703
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2005842111416149234}
-  m_Enabled: 1
-  serializedVersion: 12
-  m_Type: 2
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.1
-  m_Range: 1.2078694
-  m_SpotAngle: 52.23096
-  m_InnerSpotAngle: 25.24962
-  m_CookieSize2D: {x: 0.5, y: 0.5}
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 2
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 0
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
-  m_ForceVisible: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
-  m_LightUnit: 1
-  m_LuxAtDistance: 1
-  m_EnableSpotReflector: 1
---- !u!114 &5554550543206129743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2005842111416149234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_CustomShadowLayers: 0
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
-  m_SoftShadowQuality: 0
-  m_RenderingLayersMask:
-    serializedVersion: 0
-    m_Bits: 1
-  m_ShadowRenderingLayersMask:
-    serializedVersion: 0
-    m_Bits: 1
-  m_Version: 4
-  m_LightLayerMask: 1
-  m_ShadowLayerMask: 1
-  m_RenderingLayers: 1
-  m_ShadowRenderingLayers: 1
 --- !u!1 &3642327278229246996
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,15 +25,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3642327278229246996}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.9914449, z: -0, w: -0.1305263}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.007440001, y: 0.625, z: -0.253}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2585829602774839260}
-  - {fileID: 3760579387713858579}
   m_Father: {fileID: 7220295175921783731}
-  m_LocalEulerAnglesHint: {x: 0, y: 195, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &155118089418981936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,11 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86778107e1b69d346b38726490c0f14a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraRotation
-  mouse: {fileID: -5748826299980179748, guid: 48c841f907e20177b80d750fff796888, type: 3}
-  sensitivity: 10
+  cameraSens: 0.1
   playerBody: {fileID: 7220295175921783731}
-  xClampMin: -70
-  xClampMax: 70
+  xClampMin: -90
+  xClampMax: 90
+  cameraTouchArea: {fileID: 0}
 --- !u!1 &5724890259080517920
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,6 +61,7 @@ GameObject:
   - component: {fileID: 7220295175921783731}
   - component: {fileID: 8523259228117105516}
   - component: {fileID: 7320151333194687632}
+  - component: {fileID: 380187871817546563}
   - component: {fileID: 4523996093286571220}
   - component: {fileID: 2139401515075037549}
   - component: {fileID: 2265244142809557906}
@@ -211,7 +84,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.35356, y: 1.552, z: 0.35356}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4576694823786678445}
@@ -233,7 +106,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5724890259080517920}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -275,6 +148,19 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &380187871817546563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5724890259080517920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66238c5c488d1b242a2b65cce06c9240, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player
+  flashLight: {fileID: 0}
 --- !u!114 &4523996093286571220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,6 +178,7 @@ MonoBehaviour:
   walksound: {fileID: 6145140692269850722}
   walkClips:
   - {fileID: 8300000, guid: f5f771255453dfbf4bfe1ad25235cb9f, type: 3}
+  - {fileID: 8300000, guid: 4d0e64d3c61628f0ebf5f3d1db5e9160, type: 3}
   - {fileID: 8300000, guid: 44ab8845e8aa10f2a821d8ed1e9fea56, type: 3}
   walkVolumeRange: {x: 0.4, y: 1}
   walkVolumeChangeInterval: 0.25
@@ -304,15 +191,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5724890259080517920}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52dd6502422212bafa87c0f1efda05af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInteract
   interactButton: {fileID: 492844565862402382, guid: 48c841f907e20177b80d750fff796888, type: 3}
   playerCamera: {fileID: 560115367931379969}
-  interactDistance: 5
-  intarctCircleUi: {fileID: 0}
+  interactDistance: 3
+  interactCircleUi: {fileID: 0}
+  interactCircleUiButton: {fileID: 0}
 --- !u!136 &2265244142809557906
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -581,7 +469,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 0.7679794
+  MinDistance: 10
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0

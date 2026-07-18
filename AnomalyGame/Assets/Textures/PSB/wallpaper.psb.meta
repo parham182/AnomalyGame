@@ -170,6 +170,16 @@ ScriptedImporter:
   resliceFromLayer: 0
   pSDLayerImportSetting: []
   psdLayers:
+  - name: Layer 2
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 51c11e64376a6b7449d71db2eba84c7e
+    layerID: 16
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
   - name: Layer 1
     spriteName: Layer 1
     isGroup: 0
@@ -179,6 +189,16 @@ ScriptedImporter:
     mosaicPosition: {x: 4, y: 2060}
     flatten: 0
     isImported: 1
+    isVisible: 1
+  - name: Hue/Saturation 1
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c58c0aed84eccf94eb717af6cc84aef7
+    layerID: 17
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
     isVisible: 1
   - name: Waiipaler
     spriteName: Waiipaler
