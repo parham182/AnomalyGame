@@ -2,15 +2,21 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] AudioSource effectsAudioSource;
+    [SerializeField] AudioClip clickSound;
+
+    public static SoundManager instance;
+    private void Awake() { instance = this; }
+
+    public void PlaySoundEffect(AudioClip clip, float pitchChangeRatio = 0.05f)
     {
-        
+        effectsAudioSource.volume = SettingsManager.instance.soundFxVolume;
+        effectsAudioSource.pitch = Random.Range(1 - pitchChangeRatio, 1 + pitchChangeRatio);
+        effectsAudioSource.PlayOneShot(clip);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlayClickSound()
     {
-        
+        PlaySoundEffect(clickSound);
     }
 }

@@ -1,16 +1,10 @@
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
 public class SettingsManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public static SettingsManager instance;
+    private void Awake() { instance = this; }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public float soundFxVolume;
 }
