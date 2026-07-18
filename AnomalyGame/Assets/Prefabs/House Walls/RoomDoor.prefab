@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1921964867950827762}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.70710576, z: -0, w: 0.70710784}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 2.1000004, y: 1.64275, z: -11.998001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -43,12 +43,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 776446888698457706, guid: b8f5776fc75f16d4eb7c4a8992773b67, type: 3}
       propertyPath: m_VersionIndex
-      value: 988
+      value: 1012
       objectReference: {fileID: 0}
     - target: {fileID: 1087293371002040096, guid: b8f5776fc75f16d4eb7c4a8992773b67, type: 3}
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 2154008121819017972, guid: b8f5776fc75f16d4eb7c4a8992773b67, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8e860df066a3b9242bc6c3e46d18ef5b, type: 2}
     - target: {fileID: 6823637435682588367, guid: b8f5776fc75f16d4eb7c4a8992773b67, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -154,10 +158,14 @@ PrefabInstance:
     - target: {fileID: 7012727442573174262, guid: ab8760bf8332f8e4895482c74f63433a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 33b9e8fc82ee4574d8778823e6b8eabb, type: 2}
+      objectReference: {fileID: 2100000, guid: bf99a726d7686d24485b4abd9c866983, type: 2}
+    - target: {fileID: 7012727442573174262, guid: ab8760bf8332f8e4895482c74f63433a, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 16fdbbeea13971b4fbffd3e8868e34c1, type: 2}
     - target: {fileID: 8913920295126059377, guid: ab8760bf8332f8e4895482c74f63433a, type: 3}
       propertyPath: m_VersionIndex
-      value: 5811
+      value: 5835
       objectReference: {fileID: 0}
     - target: {fileID: 8913920295126059377, guid: ab8760bf8332f8e4895482c74f63433a, type: 3}
       propertyPath: m_SelectedEdges.Array.size
