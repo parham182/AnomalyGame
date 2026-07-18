@@ -33,7 +33,6 @@ public class CameraRotation : MonoBehaviour
     {
         if (Touchscreen.current == null) return;
 
-        // بررسی تمام لمس‌ها
         var touches = Touchscreen.current.touches;
         
         for (int i = 0; i < touches.Count; ++i)

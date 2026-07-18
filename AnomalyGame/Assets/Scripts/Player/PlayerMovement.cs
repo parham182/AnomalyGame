@@ -1,12 +1,13 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] float moveSpeed = 5f;
-    [SerializeField] Transform cam;
-    [SerializeField] AudioSource walkAudioSource;
-    [SerializeField] AudioClip[] walkClips;
+    [SerializeField] float walkSpeed;
+    [SerializeField] float runSpeed;
+    [SerializeField] Transform camHolder;
+    [SerializeField] Animator camAnimator;
     [SerializeField] float gravity = -20f;
     private CharacterController controller;
 
@@ -14,15 +15,10 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 velocity;
 
     public bool canMove = true;
-    public bool IsMoving { get; private set; }
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
-        if (walkAudioSource != null)
-        {
-            walkAudioSource.loop = true;
-        }
     }
 
     private void OnMove(InputValue value)
@@ -38,13 +34,27 @@ public class PlayerMovement : MonoBehaviour
     private void playerMove()
     {
         if (!canMove) return;
+        float speed = 0;
         
-        Vector3 camForward = Quaternion.Euler(0, cam.eulerAngles.y, 0) * Vector3.forward;
-        Vector3 camRight = Quaternion.Euler(0, cam.eulerAngles.y, 0) * Vector3.right;
+        Vector3 camForward = Quaternion.Euler(0, camHolder.eulerAngles.y, 0) * Vector3.forward;
+        Vector3 camRight = Quaternion.Euler(0, camHolder.eulerAngles.y, 0) * Vector3.right;
 
-        Vector3 moveDir = camRight * moveInput.x + camForward * moveInput.y;
+        Vector3 moveDir = (camRight * moveInput.x + camForward * moveInput.y).normalized;
 
-        controller.Move(moveDir * moveSpeed * Time.deltaTime);
+        // run or walk
+        if (moveInput.x >= 0.95 || moveInput.y >= 0.95)
+        {
+            // run
+            speed = runSpeed;
+            camAnimator.SetInteger("State", 3);
+        } else if (moveInput.x != 0 && moveInput.y != 0)
+        {
+            // walk
+            speed = walkSpeed;
+            camAnimator.SetInteger("State", 2);
+        } else camAnimator.SetInteger("State", 1); // idle camera animation
+
+        controller.Move(moveDir * speed * Time.deltaTime);
 
         velocity.y += gravity * Time.deltaTime;
         Vector3 finalMove = velocity * Time.deltaTime;
