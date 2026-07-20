@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 moveDir = (camRight * moveInput.x + camForward * moveInput.y).normalized;
 
         // run or walk
-        if (moveInput.x >= 0.95 || moveInput.y >= 0.95)
+        if (moveInput.y >= 0.93)
         {
             // run
             speed = runSpeed;
