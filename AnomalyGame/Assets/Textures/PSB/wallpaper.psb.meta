@@ -95,28 +95,6 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   multiSpriteImportData: []
   layeredSpriteImportData:
-  - name: Layer 1
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 2060
-      width: 1925
-      height: 816
-    spriteID: 671a49e6f1e184043b7202d227c2c77f
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 2060}
-    spritePosition: {x: 0, y: 788}
   - name: painted_plaster_wall_diff_4k
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -188,8 +166,8 @@ ScriptedImporter:
     layerID: 15
     mosaicPosition: {x: 4, y: 2060}
     flatten: 0
-    isImported: 1
-    isVisible: 1
+    isImported: 0
+    isVisible: 0
   - name: Hue/Saturation 2
     spriteName: 
     isGroup: 0
@@ -199,7 +177,7 @@ ScriptedImporter:
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
-    isVisible: 1
+    isVisible: 0
   - name: painted_plaster_wall_diff_4k
     spriteName: painted_plaster_wall_diff_4k
     isGroup: 0
