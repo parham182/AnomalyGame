@@ -167,6 +167,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 6324435601046528742}
   m_SourcePrefab: {fileID: 100100000, guid: b8f5776fc75f16d4eb7c4a8992773b67, type: 3}
+--- !u!65 &1586888061350728859 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 4380589810667770246, guid: b8f5776fc75f16d4eb7c4a8992773b67, type: 3}
+  m_PrefabInstance: {fileID: 3084747429557437725}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2727473827824314941 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1087293371002040096, guid: b8f5776fc75f16d4eb7c4a8992773b67, type: 3}
@@ -184,14 +189,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a657a5a86b3e31e3b8c8c409d0bff03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door
-  pivot: {fileID: 2705943360323801453}
-  player: {fileID: 0}
-  openAngle: 110
-  openSpeed: 5
-  doorFront: {fileID: 5912190483069334497}
+  doorOpenSpeed: 5
+  targetAngle: 90
+  piviot: {fileID: 5753216315372627864}
   audioSource: {fileID: 0}
-  openClip: {fileID: 0}
-  closeClip: {fileID: 0}
+  opendoor: {fileID: 0}
+  closedoor: {fileID: 0}
+  collider: {fileID: 1586888061350728859}
+  closedRot: {x: 0, y: 0, z: 0, w: 0}
 --- !u!4 &8393961392150479826 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6823637435682588367, guid: b8f5776fc75f16d4eb7c4a8992773b67, type: 3}

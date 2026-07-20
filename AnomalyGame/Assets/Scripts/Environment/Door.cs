@@ -1,28 +1,31 @@
+
 using UnityEngine;
-using UnityEngine.SocialPlatforms;
 
 public class Door : MonoBehaviour, IInteractable
 {
-    [Header("Door")]
-    [SerializeField] private Transform pivot;
-    [SerializeField] private Transform player;
-    [SerializeField] private float openAngle = 90f;
-    [SerializeField] private float openSpeed = 5f;
-    [SerializeField] private Transform doorFront;
-
+    [Header("value")]
+    [SerializeField] float doorOpenSpeed = 5f;
+    [SerializeField] float targetAngle = -90f;
+    [SerializeField] GameObject piviot;
     [Header("Sound")]
-    [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioClip openClip;
-    [SerializeField] private AudioClip closeClip;
+    [SerializeField] AudioClip opendoor;
+    [SerializeField] AudioClip closedoor;
 
-    private Quaternion closedRotation;
-    private Quaternion targetRotation;
+    [SerializeField] Collider collider;
 
-    private bool isOpen;
 
+    public Quaternion closedRot;
+    Quaternion openRot;
+
+    bool isOpen;
+
+    SoundManager soundManager;
+    
     void Start()
     {
-        closedRotation = pivot.localRotation;
+        closedRot = piviot.transform.rotation;
+        openRot = Quaternion.Euler(0f, targetAngle, 0f);
+        collider = GetComponent<Collider>();
     }
 
     public void Interact()
@@ -30,39 +33,28 @@ public class Door : MonoBehaviour, IInteractable
         isOpen = !isOpen;
 
         if (isOpen)
-        {
-            Vector3 dir = player.position - doorFront.position;
-            float dot = Vector3.Dot(doorFront.forward, dir);
-            
-            float angle = dot > 0 ? openAngle : -openAngle;
-
-            targetRotation = closedRotation * Quaternion.Euler(0f, angle, 0f);
-
-            if (audioSource && openClip)
-            {
-                audioSource.pitch = Random.Range(0.85f, 1.05f);
-                audioSource.PlayOneShot(openClip);
-            }
-
-        }
+            soundManager.PlaySoundEffect(opendoor);
         else
-        {
-            targetRotation = closedRotation;
-
-            if (audioSource && closeClip)
-            {
-                audioSource.pitch = Random.Range(0.85f, 1.05f);
-                audioSource.PlayOneShot(closeClip);
-            }
-        }
+            soundManager.PlaySoundEffect(closedoor);
     }
 
     void Update()
     {
-        pivot.localRotation = Quaternion.Slerp(
-            pivot.localRotation,
-            targetRotation,
-            openSpeed * Time.deltaTime
-        );
+        DoorHandeler();
+    }
+
+    void DoorHandeler()
+    {
+        Quaternion target = isOpen ? openRot : closedRot;
+        piviot.transform.rotation = Quaternion.Slerp(piviot.transform.rotation, target, doorOpenSpeed * Time.deltaTime);
+
+        if (piviot.transform.rotation != closedRot)
+        {
+            collider.isTrigger = true;
+        }
+        else
+        {
+            collider.isTrigger = false;
+        }
     }
 }
