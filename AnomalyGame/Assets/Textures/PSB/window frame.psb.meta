@@ -95,7 +95,7 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   multiSpriteImportData: []
   layeredSpriteImportData:
-  - name: Layer 8
+  - name: Layer 9
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -107,7 +107,7 @@ ScriptedImporter:
       y: 4
       width: 1920
       height: 1920
-    spriteID: 5bf1f194e5ca13c45b523e5049609ab1
+    spriteID: 7cfc3808f0194e14fa57e93569341d0e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -116,6 +116,28 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 0, y: 0}
+  - name: Layer 8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1932
+      width: 1920
+      height: 1920
+    spriteID: 5bf1f194e5ca13c45b523e5049609ab1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1932}
     spritePosition: {x: 0, y: 0}
   spriteImportData: []
   rigSpriteImportData: []
@@ -148,6 +170,26 @@ ScriptedImporter:
   resliceFromLayer: 0
   pSDLayerImportSetting: []
   psdLayers:
+  - name: Hue/Saturation 1
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ce4466cd95949404eb7db17dca2a4612
+    layerID: 19
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 9
+    spriteName: Layer 9
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 7cfc3808f0194e14fa57e93569341d0e
+    layerID: 18
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: Layer 7
     spriteName: 
     isGroup: 0
@@ -164,7 +206,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 5bf1f194e5ca13c45b523e5049609ab1
     layerID: 17
-    mosaicPosition: {x: 4, y: 4}
+    mosaicPosition: {x: 4, y: 1932}
     flatten: 0
     isImported: 1
     isVisible: 1

@@ -117,7 +117,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 2060}
     spritePosition: {x: 0, y: 788}
-  - name: Waiipaler
+  - name: painted_plaster_wall_diff_4k
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -129,7 +129,7 @@ ScriptedImporter:
       y: 4
       width: 2048
       height: 2048
-    spriteID: df9ab708a80ac724791f7613fdf77555
+    spriteID: 01f718e0a68226947bf43373717dde87
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -190,6 +190,26 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
+  - name: Hue/Saturation 2
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 89ab0f1da07093f44ab00a727dd62571
+    layerID: 19
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: painted_plaster_wall_diff_4k
+    spriteName: painted_plaster_wall_diff_4k
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 01f718e0a68226947bf43373717dde87
+    layerID: 18
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: Hue/Saturation 1
     spriteName: 
     isGroup: 0
@@ -199,17 +219,7 @@ ScriptedImporter:
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
-    isVisible: 1
-  - name: Waiipaler
-    spriteName: Waiipaler
-    isGroup: 0
-    parentIndex: -1
-    spriteID: df9ab708a80ac724791f7613fdf77555
-    layerID: 7
-    mosaicPosition: {x: 4, y: 4}
-    flatten: 0
-    isImported: 1
-    isVisible: 1
+    isVisible: 0
   mosaicPSDLayers: []
   rigPSDLayers: []
   sharedRigPSDLayers: []
