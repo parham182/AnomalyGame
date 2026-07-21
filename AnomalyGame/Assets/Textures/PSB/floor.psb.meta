@@ -95,7 +95,7 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   multiSpriteImportData: []
   layeredSpriteImportData:
-  - name: Layer 15
+  - name: Layer 16
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -105,9 +105,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 1920
-      height: 1920
-    spriteID: 9307a1d53fd83c943822662571959d88
+      width: 720
+      height: 720
+    spriteID: b65a483d2f2ec85408ede2397f6cc128
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -158,12 +158,12 @@ ScriptedImporter:
     flatten: 0
     isImported: 0
     isVisible: 0
-  - name: Layer 15
-    spriteName: Layer 15
+  - name: Layer 16
+    spriteName: Layer 16
     isGroup: 0
     parentIndex: -1
-    spriteID: 9307a1d53fd83c943822662571959d88
-    layerID: 49
+    spriteID: b65a483d2f2ec85408ede2397f6cc128
+    layerID: 50
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1

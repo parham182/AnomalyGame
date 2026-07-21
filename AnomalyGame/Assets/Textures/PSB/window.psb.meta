@@ -105,9 +105,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 1920
-      height: 1920
-    spriteID: 730dd16727890774c900a0b47f7d7840
+      width: 720
+      height: 720
+    spriteID: bbe5334824d0cbe4aa66475cefb32dad
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -148,32 +148,12 @@ ScriptedImporter:
   resliceFromLayer: 0
   pSDLayerImportSetting: []
   psdLayers:
-  - name: Layer 2
-    spriteName: 
-    isGroup: 0
-    parentIndex: -1
-    spriteID: b704315e459491c45aa1d3c7d9c5a173
-    layerID: 3
-    mosaicPosition: {x: 0, y: 0}
-    flatten: 0
-    isImported: 0
-    isVisible: 0
-  - name: Hue/Saturation 1
-    spriteName: 
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 737aa45d49eda9645b156f1520734980
-    layerID: 4
-    mosaicPosition: {x: 0, y: 0}
-    flatten: 0
-    isImported: 0
-    isVisible: 1
   - name: Layer 1
     spriteName: Layer 1
     isGroup: 0
     parentIndex: -1
-    spriteID: 730dd16727890774c900a0b47f7d7840
-    layerID: 2
+    spriteID: bbe5334824d0cbe4aa66475cefb32dad
+    layerID: 6
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1

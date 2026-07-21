@@ -95,7 +95,7 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   multiSpriteImportData: []
   layeredSpriteImportData:
-  - name: Layer 3
+  - name: Hue/Saturation 1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -105,9 +105,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 1920
-      height: 1920
-    spriteID: eb79921cf708ddd4ca9c723323cdb4ad
+      width: 720
+      height: 720
+    spriteID: 2179bb17e86c3da44b211117e755b3da
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -159,21 +159,11 @@ ScriptedImporter:
     isImported: 0
     isVisible: 0
   - name: Hue/Saturation 1
-    spriteName: 
+    spriteName: Hue/Saturation 1
     isGroup: 0
     parentIndex: -1
     spriteID: 2179bb17e86c3da44b211117e755b3da
     layerID: 6
-    mosaicPosition: {x: 0, y: 0}
-    flatten: 0
-    isImported: 0
-    isVisible: 1
-  - name: Layer 3
-    spriteName: Layer 3
-    isGroup: 0
-    parentIndex: -1
-    spriteID: eb79921cf708ddd4ca9c723323cdb4ad
-    layerID: 5
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1
