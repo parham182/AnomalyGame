@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86778107e1b69d346b38726490c0f14a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraRotation
-  cameraSens: 0.1
+  cameraSensY: 0.1
+  cameraSensX: 0.2
   playerBody: {fileID: 7220295175921783731}
   xClampMin: -90
   xClampMax: 90
@@ -175,8 +176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4198ee0fc451713e08aa9fadb5b204b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  walkSpeed: 3
-  runSpeed: 5
+  walkSpeed: 3.5
+  runSpeed: 6
   camHolder: {fileID: 8518254572057292471}
   camAnimator: {fileID: 3356628587333991956}
   gravity: -20
