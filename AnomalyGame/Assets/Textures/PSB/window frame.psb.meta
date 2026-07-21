@@ -95,7 +95,7 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   multiSpriteImportData: []
   layeredSpriteImportData:
-  - name: Layer 9
+  - name: Layer 18
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -107,7 +107,7 @@ ScriptedImporter:
       y: 4
       width: 1920
       height: 1920
-    spriteID: 7cfc3808f0194e14fa57e93569341d0e
+    spriteID: 7a799f2988e6e12488d7e893802fcba5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -117,7 +117,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
     spritePosition: {x: 0, y: 0}
-  - name: Layer 8
+  - name: Layer 15
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -129,7 +129,7 @@ ScriptedImporter:
       y: 1932
       width: 1920
       height: 1920
-    spriteID: 5bf1f194e5ca13c45b523e5049609ab1
+    spriteID: 712e08fe22cd07244bb4b22e4b59b46d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -170,42 +170,22 @@ ScriptedImporter:
   resliceFromLayer: 0
   pSDLayerImportSetting: []
   psdLayers:
-  - name: Hue/Saturation 1
-    spriteName: 
+  - name: Layer 18
+    spriteName: Layer 18
     isGroup: 0
     parentIndex: -1
-    spriteID: ce4466cd95949404eb7db17dca2a4612
-    layerID: 19
-    mosaicPosition: {x: 0, y: 0}
-    flatten: 0
-    isImported: 0
-    isVisible: 1
-  - name: Layer 9
-    spriteName: Layer 9
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 7cfc3808f0194e14fa57e93569341d0e
-    layerID: 18
+    spriteID: 7a799f2988e6e12488d7e893802fcba5
+    layerID: 28
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Layer 7
-    spriteName: 
+  - name: Layer 15
+    spriteName: Layer 15
     isGroup: 0
     parentIndex: -1
-    spriteID: 01f68ad6d137a53469517278b5752dfa
-    layerID: 15
-    mosaicPosition: {x: 0, y: 0}
-    flatten: 0
-    isImported: 0
-    isVisible: 0
-  - name: Layer 8
-    spriteName: Layer 8
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 5bf1f194e5ca13c45b523e5049609ab1
-    layerID: 17
+    spriteID: 712e08fe22cd07244bb4b22e4b59b46d
+    layerID: 25
     mosaicPosition: {x: 4, y: 1932}
     flatten: 0
     isImported: 1

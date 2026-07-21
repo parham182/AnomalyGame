@@ -148,16 +148,6 @@ ScriptedImporter:
   resliceFromLayer: 0
   pSDLayerImportSetting: []
   psdLayers:
-  - name: Layer 2
-    spriteName: 
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 51c11e64376a6b7449d71db2eba84c7e
-    layerID: 16
-    mosaicPosition: {x: 0, y: 0}
-    flatten: 0
-    isImported: 0
-    isVisible: 0
   - name: Layer 1
     spriteName: Layer 1
     isGroup: 0
@@ -178,6 +168,26 @@ ScriptedImporter:
     flatten: 0
     isImported: 0
     isVisible: 0
+  - name: Layer 3
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0dc06943f34685c4c810f703307a0a21
+    layerID: 23
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Hue/Saturation 3
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: aa8582909049a2d48b6a641081f556bd
+    layerID: 24
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
   - name: painted_plaster_wall_diff_4k
     spriteName: painted_plaster_wall_diff_4k
     isGroup: 0
