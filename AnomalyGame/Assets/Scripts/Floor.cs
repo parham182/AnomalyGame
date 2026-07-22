@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Floor : MonoBehaviour
 {
+    
     public bool isAnomaly = true;
     [SerializeField] private GameObject floorObject;
 
