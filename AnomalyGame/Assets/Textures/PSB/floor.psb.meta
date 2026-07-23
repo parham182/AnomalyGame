@@ -148,16 +148,26 @@ ScriptedImporter:
   resliceFromLayer: 0
   pSDLayerImportSetting: []
   psdLayers:
-  - name: Layer 1
+  - name: Layer 17
     spriteName: 
     isGroup: 0
     parentIndex: -1
-    spriteID: 18972d3598b10ba4db1e3110373ce939
-    layerID: 12
+    spriteID: 197c2ee771c47d04192107775c52518c
+    layerID: 54
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
     isVisible: 0
+  - name: Hue/Saturation 1
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: eb4604266a21a8f44b9c79d8cbec1b1b
+    layerID: 52
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
   - name: Layer 16
     spriteName: Layer 16
     isGroup: 0
