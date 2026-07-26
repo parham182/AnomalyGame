@@ -6,10 +6,10 @@ public class Bed : MonoBehaviour, IInteractable
     {
         if (Player.instance.hasPills)
         {
-            print("can sleep");
+            Player.instance.Sleep();
         } else
         {
-            print("sleep");
+            print("need pills to sleep");
         }
     }
 }

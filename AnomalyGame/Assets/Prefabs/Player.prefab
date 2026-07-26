@@ -51,6 +51,7 @@ MonoBehaviour:
   xClampMin: -90
   xClampMax: 90
   cameraTouchArea: {fileID: 0}
+  enable: 1
 --- !u!1 &5724890259080517920
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,7 +164,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66238c5c488d1b242a2b65cce06c9240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
-  flashLight: {fileID: 0}
+  cameraRotation: {fileID: 155118089418981936}
+  playerMovement: {fileID: 4523996093286571220}
+  uiCanvas: {fileID: 0}
+  hasPills: 0
 --- !u!114 &4523996093286571220
 MonoBehaviour:
   m_ObjectHideFlags: 0
