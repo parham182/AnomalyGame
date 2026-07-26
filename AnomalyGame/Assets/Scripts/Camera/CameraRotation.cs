@@ -11,6 +11,8 @@ public class CameraRotation : MonoBehaviour
     [SerializeField] float xClampMax = 90f;
     [SerializeField] RectTransform cameraTouchArea;
 
+    public bool enable = true;
+
     private Vector2 lookInput;
     private float xRotation = 0f;
     private float yRotation = 0f;
@@ -27,7 +29,8 @@ public class CameraRotation : MonoBehaviour
 
     void Update()
     {
-        HandleTouchInput();
+        if (enable)
+            HandleTouchInput();
     }
 
     private void HandleTouchInput()
