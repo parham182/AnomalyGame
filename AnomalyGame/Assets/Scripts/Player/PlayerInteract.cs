@@ -23,10 +23,10 @@ public class PlayerInteract : MonoBehaviour
     void Update()
     {
         Ray ray = new Ray(playerCamera.transform.position,
-                              playerCamera.transform.forward);
+            playerCamera.transform.forward);
         if (Physics.Raycast(ray, out RaycastHit hit, interactDistance))
         {
-           
+            
             if (hit.collider.TryGetComponent<IInteractable>(out var interactable))
             {
                 interactCircleUi.SetActive(true);

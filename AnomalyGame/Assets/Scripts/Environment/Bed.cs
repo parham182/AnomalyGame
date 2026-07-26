@@ -1,16 +1,15 @@
 using UnityEngine;
 
-public class Bed : MonoBehaviour
+public class Bed : MonoBehaviour, IInteractable
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void Interact()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (Player.instance.hasPills)
+        {
+            print("can sleep");
+        } else
+        {
+            print("sleep");
+        }
     }
 }
