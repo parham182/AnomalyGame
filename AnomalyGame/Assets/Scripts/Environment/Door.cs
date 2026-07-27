@@ -1,60 +1,62 @@
-
 using UnityEngine;
 
 public class Door : MonoBehaviour, IInteractable
 {
-    [Header("value")]
+    [Header("Value")]
     [SerializeField] float doorOpenSpeed = 5f;
     [SerializeField] float targetAngle = -90f;
     [SerializeField] GameObject piviot;
+
     [Header("Sound")]
     [SerializeField] AudioClip opendoor;
     [SerializeField] AudioClip closedoor;
 
-    [SerializeField] Collider collider;
+    [SerializeField] Collider doorCollider;
 
+    private Quaternion closedRot;
+    private Quaternion openRot;
 
-    public Quaternion closedRot;
-    Quaternion openRot;
+    private bool isOpen;
 
-    bool isOpen;
-
-    SoundManager soundManager;
-    
     void Start()
     {
         closedRot = piviot.transform.rotation;
         openRot = Quaternion.Euler(0f, targetAngle, 0f);
-        collider = GetComponent<Collider>();
+
+        if (doorCollider == null)
+            doorCollider = GetComponent<Collider>();
     }
 
     public void Interact()
     {
         isOpen = !isOpen;
 
+        doorCollider.isTrigger = true;
+
         if (isOpen)
-            soundManager.PlaySoundEffect(opendoor);
+            SoundManager.instance.PlaySoundEffect(opendoor);
         else
-            soundManager.PlaySoundEffect(closedoor);
+            SoundManager.instance.PlaySoundEffect(closedoor);
     }
 
     void Update()
     {
-        DoorHandeler();
+        DoorHandler();
     }
 
-    void DoorHandeler()
+    void DoorHandler()
     {
         Quaternion target = isOpen ? openRot : closedRot;
-        piviot.transform.rotation = Quaternion.Slerp(piviot.transform.rotation, target, doorOpenSpeed * Time.deltaTime);
 
-        if (piviot.transform.rotation != closedRot)
+        piviot.transform.rotation = Quaternion.Slerp(
+            piviot.transform.rotation,
+            target,
+            doorOpenSpeed * Time.deltaTime);
+
+
+        if (Quaternion.Angle(piviot.transform.rotation, target) < 1f)
         {
-            collider.isTrigger = true;
-        }
-        else
-        {
-            collider.isTrigger = false;
+            doorCollider.isTrigger = false;
         }
     }
 }

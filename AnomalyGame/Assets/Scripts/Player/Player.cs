@@ -6,17 +6,17 @@ public class Player : MonoBehaviour
     [SerializeField] PlayerMovement playerMovement;
     [SerializeField] GameObject uiCanvas;
     [SerializeField] UiFader uiFader;
-
+    
     public bool hasPills = false;
     public static Player instance;
-
+    
     private void Awake() { instance = this; }
 
     private void Start()
     {
         uiFader.FadeOut();
     }
-
+    
     public void Sleep()
     {
         uiFader.duration = 1;
