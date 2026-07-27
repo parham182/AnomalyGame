@@ -1,11 +1,13 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    [HideInInspector]
-    public string[] sceneList = {"DefaultHouse", "Anomaly1"};
-    public string currentLevel;
+    public GameObject[] houseList;
+    public GameObject currentHouse;
+    [SerializeField] GameObject pillsPrefab;
+    [SerializeField] Transform pillsSpawnPoint;
+
+    [SerializeField] UiFader uiFader;
 
     public static LevelManager instance;
     private void Awake()
@@ -22,18 +24,28 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        currentLevel = SceneManager.GetActiveScene().name;
+        currentHouse = houseList[0];
     }
 
     public void ChangeLevel()
     {
-        string selectedScene;
+        GameObject selectedHouse;
         do
         {
-            int randIndex = Random.Range(0, sceneList.Length);
-            selectedScene = sceneList[randIndex];
-        } while(selectedScene == currentLevel);
+            int randIndex = Random.Range(0, houseList.Length);
+            selectedHouse = houseList[randIndex];
+        } while(selectedHouse == currentHouse);
 
-        SceneManager.LoadScene(selectedScene);
+        foreach(GameObject house in houseList)
+        {
+            house.SetActive(false);
+        }
+
+        selectedHouse.SetActive(true);
+        Instantiate(pillsPrefab, pillsSpawnPoint.position, pillsSpawnPoint.rotation);
+        Player.instance.hasPills = false;
+
+        uiFader.duration = 3f;
+        uiFader.FadeOut();
     }
 }
