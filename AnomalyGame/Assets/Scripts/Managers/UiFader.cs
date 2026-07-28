@@ -6,7 +6,7 @@ public class UiFader : MonoBehaviour
 {
     [SerializeField] private Image image;
     [HideInInspector]
-    public float duration = 3f;
+    public float duration = 2f;
 
     private Coroutine fadeCoroutine;
 
