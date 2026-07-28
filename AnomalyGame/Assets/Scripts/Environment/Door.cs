@@ -16,7 +16,7 @@ public class Door : MonoBehaviour, IInteractable
     private Quaternion closedRot;
     private Quaternion openRot;
 
-    private bool isOpen;
+    public bool isOpen;
 
     void Start()
     {

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
+    public Door bedroomDoor;
     public GameObject[] houseList;
     public GameObject currentHouse;
     public string selectePill;
@@ -50,6 +51,7 @@ public class LevelManager : MonoBehaviour
 
         uiFader.duration = 3f;
         uiFader.FadeOut();
+        bedroomDoor.isOpen = false;
     }
 
     private void WinLoseCheck(string correctPill)
