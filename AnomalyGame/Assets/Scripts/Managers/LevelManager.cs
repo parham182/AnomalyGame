@@ -4,6 +4,7 @@ public class LevelManager : MonoBehaviour
 {
     public GameObject[] houseList;
     public GameObject currentHouse;
+    public string selectePill;
     [SerializeField] GameObject pillsPrefab;
     [SerializeField] Transform pillsSpawnPoint;
 
@@ -29,6 +30,7 @@ public class LevelManager : MonoBehaviour
 
     public void ChangeLevel()
     {
+        WinLoseCheck(currentHouse == houseList[0] ? "BLUE" : "RED");
         GameObject selectedHouse;
         do
         {
@@ -42,10 +44,23 @@ public class LevelManager : MonoBehaviour
         }
 
         selectedHouse.SetActive(true);
+        currentHouse = selectedHouse;
         Instantiate(pillsPrefab, pillsSpawnPoint.position, pillsSpawnPoint.rotation);
         Player.instance.hasPills = false;
 
         uiFader.duration = 3f;
         uiFader.FadeOut();
+    }
+
+    private void WinLoseCheck(string correctPill)
+    {
+        print(correctPill + " " + selectePill);
+        if (selectePill == correctPill)
+        {
+            print("win");
+        } else
+        {
+            print("lose");
+        }
     }
 }
