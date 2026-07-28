@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 000a329160cf40b4ab352a4ca27f5787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pills
-  takePill: {fileID: 8300000, guid: e11dc39cef6792d4cb03ab66c494bc24, type: 3}
+  takePill: {fileID: 8300000, guid: aba7170c0837f8d44bc6a9a165145513, type: 3}
 --- !u!1001 &3021169020795571029
 PrefabInstance:
   m_ObjectHideFlags: 0

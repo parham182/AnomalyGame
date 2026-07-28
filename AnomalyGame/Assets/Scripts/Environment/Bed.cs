@@ -3,7 +3,6 @@ using UnityEngine;
 public class Bed : MonoBehaviour, IInteractable
 {
     [SerializeField] AudioClip sleepSound;
-    [SerializeField] GameObject uiNotif;
     public void Interact()
     {
         if (Player.instance.hasPills)
@@ -12,7 +11,7 @@ public class Bed : MonoBehaviour, IInteractable
             Player.instance.Sleep();
         } else
         {
-            uiNotif.SetActive(true);
+            NotifManager.instance.ShowNotif("بدون قرص نمیتونم بخوابم", 3);
         }
     }
 }

@@ -10,7 +10,7 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] GameObject interactCircleUi;
     [SerializeField] GameObject interactCircleUiButton;
 
-    bool isIntract = false;
+    // bool isIntract = false;
     void OnEnable()
     {
         interactButton.action.Enable();
