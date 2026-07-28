@@ -19,7 +19,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &8344188268562345923
 Transform:
@@ -1179,7 +1179,7 @@ MonoBehaviour:
   m_Shape:
     rid: 1660671904627818523
   m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 781
+  m_UnmodifiedMeshVersion: 956
   m_Size: {x: 4, y: 1, z: 4}
   m_LocalCenter: {x: 0, y: 0, z: 0}
   references:
