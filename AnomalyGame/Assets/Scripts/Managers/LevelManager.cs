@@ -5,11 +5,14 @@ public class LevelManager : MonoBehaviour
     public Door bedroomDoor;
     public GameObject[] houseList;
     public GameObject currentHouse;
-    public string selectePill;
+    public string selectedPill;
     [SerializeField] GameObject pillsPrefab;
     [SerializeField] Transform pillsSpawnPoint;
 
     [SerializeField] UiFader uiFader;
+
+    [Range(0f, 1f)]
+    [SerializeField] private float anomalyChance = 0.7f;
 
     public static LevelManager instance;
     private void Awake()
@@ -32,20 +35,31 @@ public class LevelManager : MonoBehaviour
     public void ChangeLevel()
     {
         WinLoseCheck(currentHouse == houseList[0] ? "BLUE" : "RED");
-        GameObject selectedHouse;
-        do
-        {
-            int randIndex = Random.Range(0, houseList.Length);
-            selectedHouse = houseList[randIndex];
-        } while(selectedHouse == currentHouse);
 
-        foreach(GameObject house in houseList)
+        foreach (GameObject house in houseList)
         {
             house.SetActive(false);
         }
 
+        GameObject selectedHouse;
+
+        if (Random.value <= anomalyChance)
+        {
+            do
+            {
+                int randIndex = Random.Range(1, houseList.Length);
+                selectedHouse = houseList[randIndex];
+            }
+            while (selectedHouse == currentHouse && houseList.Length > 2);
+        }
+        else
+        {
+            selectedHouse = houseList[0];
+        }
+
         selectedHouse.SetActive(true);
         currentHouse = selectedHouse;
+
         Instantiate(pillsPrefab, pillsSpawnPoint.position, pillsSpawnPoint.rotation);
         Player.instance.hasPills = false;
 
@@ -56,8 +70,8 @@ public class LevelManager : MonoBehaviour
 
     private void WinLoseCheck(string correctPill)
     {
-        print(correctPill + " " + selectePill);
-        if (selectePill == correctPill)
+        print(correctPill + " " + selectedPill);
+        if (selectedPill == correctPill)
         {
             print("win");
         } else

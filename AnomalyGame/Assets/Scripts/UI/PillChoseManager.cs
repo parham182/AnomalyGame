@@ -22,13 +22,13 @@ public class PillChoseManager : MonoBehaviour
 
     public void OnRedPillClick() {
         CloseOptions();
-        LevelManager.instance.selectePill = "RED";
+        LevelManager.instance.selectedPill = "RED";
         Player.instance.Sleep();
     }
 
     public void OnBluePillClick() {
         CloseOptions();
-        LevelManager.instance.selectePill = "BLUE";
+        LevelManager.instance.selectedPill = "BLUE";
         Player.instance.Sleep();
     }
 
