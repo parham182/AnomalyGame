@@ -21,11 +21,6 @@ public class Player : MonoBehaviour
     {
         uiFader.duration = 1;
         uiFader.FadeIn();
-        Invoke("ChangeLevel", 2f);
-    }
-
-    private void ChangeLevel()
-    {
         LevelManager.instance.ChangeLevel();
     }
 

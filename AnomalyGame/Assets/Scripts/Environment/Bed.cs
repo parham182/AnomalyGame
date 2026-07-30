@@ -13,7 +13,7 @@ public class Bed : MonoBehaviour, IInteractable
             pillChoseManager.OpenOptions();
         } else
         {
-            NotifManager.instance.ShowNotif("بدون قرص نمیتونم بخوابم", 3);
+            NotifManager.instance.ShowNotif("شما برای خواب به قرص نیاز دارید", 3);
         }
     }
 }

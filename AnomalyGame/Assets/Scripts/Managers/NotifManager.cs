@@ -26,7 +26,6 @@ public class NotifManager : MonoBehaviour
     {
         notifObject.SetActive(true);
         notifText.text = message;
-
         yield return new WaitForSeconds(showTime);
 
         notifObject.SetActive(false);

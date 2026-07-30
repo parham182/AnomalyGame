@@ -1,3 +1,5 @@
+using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
@@ -6,7 +8,9 @@ public class LevelManager : MonoBehaviour
     public GameObject[] houseList;
     public GameObject currentHouse;
     public string selectedPill;
+    public int dayNumber = 0;
     [SerializeField] GameObject pillsPrefab;
+    [SerializeField] string[] DayNumberTextMessages;
     [SerializeField] Transform pillsSpawnPoint;
 
     [SerializeField] UiFader uiFader;
@@ -34,8 +38,6 @@ public class LevelManager : MonoBehaviour
 
     public void ChangeLevel()
     {
-        WinLoseCheck(currentHouse == houseList[0] ? "BLUE" : "RED");
-
         foreach (GameObject house in houseList)
         {
             house.SetActive(false);
@@ -63,20 +65,31 @@ public class LevelManager : MonoBehaviour
         Instantiate(pillsPrefab, pillsSpawnPoint.position, pillsSpawnPoint.rotation);
         Player.instance.hasPills = false;
 
-        uiFader.duration = 3f;
-        uiFader.FadeOut();
+        uiFader.duration = 2f;
+        StartCoroutine(ShowDayMessage());
         bedroomDoor.isOpen = false;
+    }
+
+    private IEnumerator ShowDayMessage()
+    {
+        WinLoseCheck(currentHouse == houseList[0] ? "BLUE" : "RED");
+        yield return new WaitForSeconds(2);
+        NotifManager.instance.ShowNotif(DayNumberTextMessages[dayNumber], 3);
+        yield return new WaitForSeconds(3);
+        uiFader.FadeOut();
     }
 
     private void WinLoseCheck(string correctPill)
     {
-        print(correctPill + " " + selectedPill);
         if (selectedPill == correctPill)
         {
-            print("win");
+            dayNumber += 1;
         } else
         {
-            print("lose");
+            dayNumber = 0;
+            // TODO: show jump scare
         }
+
+        print(dayNumber);
     }
 }
