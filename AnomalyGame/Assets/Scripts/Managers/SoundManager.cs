@@ -15,6 +15,13 @@ public class SoundManager : MonoBehaviour
     public static SoundManager instance;
     private void Awake() { instance = this; }
 
+    public void PlaySoundEffect(AudioSource audioSource, AudioClip clip, float pitchChangeRatio = 0.05f)
+    {
+        audioSource.volume = SettingsManager.instance.soundFxVolume;
+        audioSource.pitch = Random.Range(1 - pitchChangeRatio, 1 + pitchChangeRatio);
+        audioSource.PlayOneShot(clip);
+    }
+
     public void PlaySoundEffect(AudioClip clip, float pitchChangeRatio = 0.05f)
     {
         effectsAudioSource.volume = SettingsManager.instance.soundFxVolume;

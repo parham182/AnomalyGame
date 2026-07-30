@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bf03234a83588da40b6faaa295b17c1f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - doorOpenClip: {fileID: 8300000, guid: 2af9da9496ed32b4fb5d8b048e1c3f86, type: 3}
+  - doorCloseClip: {fileID: 8300000, guid: 617fbb63bd675674bae73e770da0d203, type: 3}
+  - BookFallClip: {fileID: 8300000, guid: 6ffdf35a437409c40b0694af1be39ea1, type: 3}
+  - doorKnockClip: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
