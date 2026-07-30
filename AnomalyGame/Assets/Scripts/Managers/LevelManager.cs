@@ -62,7 +62,6 @@ public class LevelManager : MonoBehaviour
         selectedHouse.SetActive(true);
         currentHouse = selectedHouse;
 
-        Instantiate(pillsPrefab, pillsSpawnPoint.position, pillsSpawnPoint.rotation);
         Player.instance.hasPills = false;
 
         uiFader.duration = 2f;
@@ -75,6 +74,7 @@ public class LevelManager : MonoBehaviour
         WinLoseCheck(currentHouse == houseList[0] ? "BLUE" : "RED");
         yield return new WaitForSeconds(2);
         NotifManager.instance.ShowNotif(DayNumberTextMessages[dayNumber], 3);
+        Instantiate(pillsPrefab, pillsSpawnPoint.position, pillsSpawnPoint.rotation);
         yield return new WaitForSeconds(3);
         uiFader.FadeOut();
     }
