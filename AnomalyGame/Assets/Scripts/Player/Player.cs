@@ -19,8 +19,7 @@ public class Player : MonoBehaviour
     
     public void Sleep()
     {
-        uiFader.duration = 1;
-        uiFader.FadeIn();
+        uiFader.FadeIn(1);
         LevelManager.instance.ChangeLevel();
     }
 

@@ -64,7 +64,6 @@ public class LevelManager : MonoBehaviour
 
         Player.instance.hasPills = false;
 
-        uiFader.duration = 2f;
         StartCoroutine(ShowDayMessage());
         bedroomDoor.isOpen = false;
     }
@@ -76,7 +75,7 @@ public class LevelManager : MonoBehaviour
         NotifManager.instance.ShowNotif(DayNumberTextMessages[dayNumber], 3);
         Instantiate(pillsPrefab, pillsSpawnPoint.position, pillsSpawnPoint.rotation);
         yield return new WaitForSeconds(3);
-        uiFader.FadeOut();
+        uiFader.FadeOut(2);
     }
 
     private void WinLoseCheck(string correctPill)

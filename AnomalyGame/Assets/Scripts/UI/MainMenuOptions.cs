@@ -13,8 +13,7 @@ public class MainMenuOptions : MonoBehaviour
 
     public void OnStartClick()
     {
-        uiFader.duration = 1;
-        uiFader.FadeIn();
+        uiFader.FadeIn(1);
         StartCoroutine(SoundManager.instance.StopMusicSlowly());
         Invoke(nameof(ChangeScene), 1.5f);
     }
@@ -25,8 +24,7 @@ public class MainMenuOptions : MonoBehaviour
 
     public void OnExitGameClick()
     {
-        uiFader.duration = 0.4f;
-        uiFader.FadeIn();
+        uiFader.FadeIn(0.4f);
         StartCoroutine(SoundManager.instance.StopMusicSlowly(0.4f));
 
         Invoke(nameof(ExitGame), 0.5f);

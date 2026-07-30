@@ -6,29 +6,28 @@ public class UiFader : MonoBehaviour
 {
     [SerializeField] private Image image;
     [HideInInspector]
-    public float duration = 2f;
 
     private Coroutine fadeCoroutine;
 
-    public void FadeIn()
+    public void FadeIn(float duration = 3)
     {
-        StartFade(0f, 1f);
+        StartFade(0f, 1f, duration);
     }
 
-    public void FadeOut()
+    public void FadeOut(float duration = 3)
     {
-        StartFade(1f, 0f);
+        StartFade(1f, 0f, duration);
     }
 
-    private void StartFade(float startAlpha, float endAlpha)
+    private void StartFade(float startAlpha, float endAlpha, float duration)
     {
         if (fadeCoroutine != null)
             StopCoroutine(fadeCoroutine);
 
-        fadeCoroutine = StartCoroutine(FadeRoutine(startAlpha, endAlpha));
+        fadeCoroutine = StartCoroutine(FadeRoutine(startAlpha, endAlpha, duration));
     }
 
-    private IEnumerator FadeRoutine(float startAlpha, float endAlpha)
+    private IEnumerator FadeRoutine(float startAlpha, float endAlpha, float duration)
     {
         float time = 0f;
         Color color = image.color;
