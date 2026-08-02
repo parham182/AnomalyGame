@@ -54485,6 +54485,7 @@ MonoBehaviour:
   - {fileID: 732010928}
   - {fileID: 1172969048}
   currentHouse: {fileID: 1976679498}
+  DefaultHouse: {fileID: 1976679498}
   selectedPill: 
   dayNumber: 0
   pillsPrefab: {fileID: 4422935816935080632, guid: 90c74711d9cf2bf4a90c3f2b8b3c8fbc, type: 3}

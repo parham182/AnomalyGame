@@ -7,6 +7,7 @@ public class LevelManager : MonoBehaviour
     public Door bedroomDoor;
     public GameObject[] houseList;
     public GameObject currentHouse;
+    public GameObject DefaultHouse;
     public string selectedPill;
     public int dayNumber = 0;
     [SerializeField] GameObject pillsPrefab;
@@ -56,10 +57,12 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
-            selectedHouse = houseList[0];
+            selectedHouse = DefaultHouse;
         }
 
         selectedHouse.SetActive(true);
+        WinLoseCheck(currentHouse == DefaultHouse ? "BLUE" : "RED");
+
         currentHouse = selectedHouse;
 
         Player.instance.hasPills = false;
@@ -70,7 +73,6 @@ public class LevelManager : MonoBehaviour
 
     private IEnumerator ShowDayMessage()
     {
-        WinLoseCheck(currentHouse == houseList[0] ? "BLUE" : "RED");
         yield return new WaitForSeconds(2);
         NotifManager.instance.ShowNotif(DayNumberTextMessages[dayNumber], 3);
         Instantiate(pillsPrefab, pillsSpawnPoint.position, pillsSpawnPoint.rotation);
@@ -80,6 +82,7 @@ public class LevelManager : MonoBehaviour
 
     private void WinLoseCheck(string correctPill)
     {
+        print("selectedPill: " + selectedPill + "--correctPill: " + correctPill);
         if (selectedPill == correctPill)
         {
             dayNumber += 1;
