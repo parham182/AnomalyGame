@@ -1,6 +1,6 @@
 using System.Collections;
-using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
@@ -19,6 +19,12 @@ public class LevelManager : MonoBehaviour
 
     [Range(0f, 1f)]
     [SerializeField] private float anomalyChance = 0.7f;
+
+    [Header("Jumpscare stuff")]
+    [SerializeField] GameObject jumpscareImageObject;
+    [SerializeField] Image jumpscareImage;
+    [SerializeField] AudioClip jumpscareSound;
+    [SerializeField] Sprite[] jumpscareImageList;
 
     public static LevelManager instance;
     private void Awake()
@@ -65,10 +71,7 @@ public class LevelManager : MonoBehaviour
         WinLoseCheck(currentHouse == DefaultHouse ? "BLUE" : "RED");
 
         currentHouse = selectedHouse;
-
         Player.instance.hasPills = false;
-
-        StartCoroutine(ShowDayMessage());
         bedroomDoor.isOpen = false;
     }
 
@@ -90,10 +93,30 @@ public class LevelManager : MonoBehaviour
         if (selectedPill == correctPill)
         {
             dayNumber += 1;
+            StartCoroutine(ShowDayMessage());
         } else
         {
             dayNumber = 0;
-            // TODO: show jump scare
+            StartCoroutine(PlayJumpscare());
         }
+    }
+
+    private IEnumerator PlayJumpscare()
+    {
+        yield return new WaitForSeconds(2);
+
+        // jumpscare stuff
+        jumpscareImageObject.SetActive(true);
+        jumpscareImage.sprite = jumpscareImageList[Random.Range(0, jumpscareImageList.Length)];
+        SoundManager.instance.PlaySoundEffect(jumpscareSound, 0);
+
+        Instantiate(pillsPrefab, pillsSpawnPoint.position, pillsSpawnPoint.rotation);
+
+        yield return new WaitForSeconds(3);
+
+        // after jumpscare stuff
+        jumpscareImageObject.SetActive(false);
+
+        uiFader.FadeOut(2);
     }
 }
