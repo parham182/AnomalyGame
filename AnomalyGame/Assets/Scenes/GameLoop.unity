@@ -54499,6 +54499,7 @@ MonoBehaviour:
   - "\u0631\u0648\u0632 \u0647\u0641\u062A\u0645"
   - "\u0631\u0648\u0632 \u0622\u062E\u0631"
   pillsSpawnPoint: {fileID: 1705452620}
+  impactCinematicClip: {fileID: 8300000, guid: f87138955fcddba419155582be8b1fb4, type: 3}
   uiFader: {fileID: 2003001877}
   anomalyChance: 0.75
 --- !u!114 &992698405
