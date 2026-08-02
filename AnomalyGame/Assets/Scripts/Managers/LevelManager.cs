@@ -112,7 +112,7 @@ public class LevelManager : MonoBehaviour
 
         Instantiate(pillsPrefab, pillsSpawnPoint.position, pillsSpawnPoint.rotation);
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
 
         // after jumpscare stuff
         jumpscareImageObject.SetActive(false);

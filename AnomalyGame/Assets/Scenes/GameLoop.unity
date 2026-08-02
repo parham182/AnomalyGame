@@ -51918,7 +51918,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 1704168908, guid: 7f772ad8aa8f56d4196aaa997f487513, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -89424,10 +89424,13 @@ MonoBehaviour:
   impactCinematicClip: {fileID: 8300000, guid: f87138955fcddba419155582be8b1fb4, type: 3}
   uiFader: {fileID: 2003001877}
   anomalyChance: 0.75
-  jumpscareImageObject: {fileID: 0}
-  jumpscareImage: {fileID: 0}
-  jumpscareSound: {fileID: 0}
-  jumpscareImageList: []
+  jumpscareImageObject: {fileID: 581861557}
+  jumpscareImage: {fileID: 581861559}
+  jumpscareSound: {fileID: 8300000, guid: cbf94fbcfa2c292488a3db89b4042834, type: 3}
+  jumpscareImageList:
+  - {fileID: 1704168908, guid: 7f772ad8aa8f56d4196aaa997f487513, type: 3}
+  - {fileID: -2097024549, guid: d9f5e90f08c6b4d419ac5c02eb40f624, type: 3}
+  - {fileID: 1769604346, guid: 3901e94effcf52d47a4313764ba96861, type: 3}
 --- !u!114 &992698405
 MonoBehaviour:
   m_ObjectHideFlags: 0
