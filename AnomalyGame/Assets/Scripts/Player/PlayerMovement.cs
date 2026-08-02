@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Transform camHolder;
     [SerializeField] Animator camAnimator;
     [SerializeField] float gravity = -20f;
+    [SerializeField] Joystick joystick;
     private CharacterController controller;
 
     Vector2 moveInput;
@@ -21,13 +22,10 @@ public class PlayerMovement : MonoBehaviour
         controller = GetComponent<CharacterController>();
     }
 
-    private void OnMove(InputValue value)
-    {
-        moveInput = value.Get<Vector2>();
-    }
-
     void Update()
     {
+        moveInput.x = joystick.Horizontal;
+        moveInput.y = joystick.Vertical;
         playerMove();
     }
 
@@ -42,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 moveDir = (camRight * moveInput.x + camForward * moveInput.y).normalized;
 
         // run or walk
-        if (moveInput.y >= 0.93)
+        if (moveInput.y >= 0.9)
         {
             // run
             speed = runSpeed;
