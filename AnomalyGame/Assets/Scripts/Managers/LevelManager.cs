@@ -88,7 +88,5 @@ public class LevelManager : MonoBehaviour
             dayNumber = 0;
             // TODO: show jump scare
         }
-
-        print(dayNumber);
     }
 }
