@@ -13,6 +13,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] GameObject pillsPrefab;
     [SerializeField] string[] DayNumberTextMessages;
     [SerializeField] Transform pillsSpawnPoint;
+    [SerializeField] AudioClip impactCinematicClip;
 
     [SerializeField] UiFader uiFader;
 
@@ -74,8 +75,11 @@ public class LevelManager : MonoBehaviour
     private IEnumerator ShowDayMessage()
     {
         yield return new WaitForSeconds(2);
+
         NotifManager.instance.ShowNotif(DayNumberTextMessages[dayNumber], 3);
+        SoundManager.instance.PlaySoundEffect(impactCinematicClip, 0);
         Instantiate(pillsPrefab, pillsSpawnPoint.position, pillsSpawnPoint.rotation);
+
         yield return new WaitForSeconds(3);
         uiFader.FadeOut(2);
     }

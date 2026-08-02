@@ -54515,7 +54515,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SoundManager
   effectsAudioSource: {fileID: 595693083}
   musicAudioSource: {fileID: 1879810840}
-  clickSound: {fileID: 0}
+  clickSound: {fileID: 8300000, guid: d1cb0d9ec799d32498c0db018c8c510f, type: 3}
 --- !u!114 &992698406
 MonoBehaviour:
   m_ObjectHideFlags: 0
