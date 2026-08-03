@@ -4,8 +4,6 @@ using UnityEngine.EventSystems;
 
 public class CameraRotation : MonoBehaviour
 {
-    [SerializeField] float cameraSensY = 0.1f;
-    [SerializeField] float cameraSensX = 0.2f;
     [SerializeField] Transform playerBody;
     [SerializeField] float xClampMin = -90f;
     [SerializeField] float xClampMax = 90f;
@@ -68,8 +66,8 @@ public class CameraRotation : MonoBehaviour
             {
                 Vector2 delta = touch.delta.ReadValue();
 
-                float deltaX = delta.x * cameraSensX;
-                float deltaY = delta.y * cameraSensY;
+                float deltaX = delta.x * SettingsManager.instance.senstivity;
+                float deltaY = delta.y * (SettingsManager.instance.senstivity / 1.8f);
 
                 lookInput = new Vector2(deltaX, deltaY);
                 MoveCamera();

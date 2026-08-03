@@ -89460,6 +89460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SettingsManager
   soundFxVolume: 1
   musicVolume: 0.7
+  senstivity: 0.2
 --- !u!4 &992698407
 Transform:
   m_ObjectHideFlags: 0
@@ -101695,7 +101696,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 345, y: 308}
+  m_AnchoredPosition: {x: 298, y: 278}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1110039677
@@ -154194,7 +154195,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 216.5233, y: 216.5233}
+  m_SizeDelta: {x: 258.5233, y: 258.5233}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1544013015
 MonoBehaviour:
@@ -198771,7 +198772,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1548397496102586999, guid: 37ce21e442014b247bc656dda1e71a4a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2642647292936678531, guid: 37ce21e442014b247bc656dda1e71a4a, type: 3}
       propertyPath: m_Name
