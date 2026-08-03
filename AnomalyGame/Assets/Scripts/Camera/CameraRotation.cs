@@ -66,8 +66,8 @@ public class CameraRotation : MonoBehaviour
             {
                 Vector2 delta = touch.delta.ReadValue();
 
-                float deltaX = delta.x * SettingsManager.instance.senstivity;
-                float deltaY = delta.y * (SettingsManager.instance.senstivity / 1.8f);
+                float deltaX = delta.x * SettingsManager.instance.sensitivity;
+                float deltaY = delta.y * (SettingsManager.instance.sensitivity / 1.8f);
 
                 lookInput = new Vector2(deltaX, deltaY);
                 MoveCamera();

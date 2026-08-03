@@ -9,7 +9,7 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        musicAudioSource.volume = SettingsManager.instance.musicVolume;
+        musicAudioSource.volume = SettingsManager.instance.musicSoundVolume;
     }
 
     public static SoundManager instance;

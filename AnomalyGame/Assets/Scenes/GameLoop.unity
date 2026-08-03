@@ -89344,6 +89344,7 @@ GameObject:
   - component: {fileID: 992698404}
   - component: {fileID: 992698403}
   - component: {fileID: 992698402}
+  - component: {fileID: 992698408}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -89459,8 +89460,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SettingsManager
   soundFxVolume: 1
-  musicVolume: 0.7
-  senstivity: 0.2
+  musicSoundVolume: 0
+  sensitivity: 0
 --- !u!4 &992698407
 Transform:
   m_ObjectHideFlags: 0
@@ -89476,6 +89477,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &992698408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992698401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8cf125479100ca4381769de017ebaea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SaveLoadManager
+  settingsDataFileName: settings.json
 --- !u!43 &998342578
 Mesh:
   m_ObjectHideFlags: 0
@@ -120663,7 +120677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6029583980488718189, guid: 38c86ae5aaf5f464db402b87e126e1bc, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6074458405381984521, guid: 38c86ae5aaf5f464db402b87e126e1bc, type: 3}
       propertyPath: m_Mesh
@@ -195807,7 +195821,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6029583980488718189, guid: 38c86ae5aaf5f464db402b87e126e1bc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6074458405381984521, guid: 38c86ae5aaf5f464db402b87e126e1bc, type: 3}
       propertyPath: m_Mesh
@@ -198772,7 +198786,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1548397496102586999, guid: 37ce21e442014b247bc656dda1e71a4a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2642647292936678531, guid: 37ce21e442014b247bc656dda1e71a4a, type: 3}
       propertyPath: m_Name
