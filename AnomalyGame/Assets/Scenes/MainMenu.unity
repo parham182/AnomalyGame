@@ -1385,9 +1385,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7732744903359836083, guid: 38c86ae5aaf5f464db402b87e126e1bc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 597345557}
-    - targetCorrespondingSourceObject: {fileID: 3781289175367511495, guid: 38c86ae5aaf5f464db402b87e126e1bc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 706060901}
     - targetCorrespondingSourceObject: {fileID: 6014000574798958026, guid: 38c86ae5aaf5f464db402b87e126e1bc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 767082337}
@@ -7627,7 +7624,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1548397496102586999, guid: 37ce21e442014b247bc656dda1e71a4a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2642647292936678531, guid: 37ce21e442014b247bc656dda1e71a4a, type: 3}
       propertyPath: m_IsActive
@@ -11682,33 +11679,6 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
---- !u!1 &706060897 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3781289175367511495, guid: 38c86ae5aaf5f464db402b87e126e1bc, type: 3}
-  m_PrefabInstance: {fileID: 15805843}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &706060901
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 706060897}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7c1eb6f26819dfd48a6049a96772e058, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!43 &719888377
 Mesh:
   m_ObjectHideFlags: 0
@@ -15933,6 +15903,7 @@ GameObject:
   - component: {fileID: 1094969880}
   - component: {fileID: 1094969882}
   - component: {fileID: 1094969883}
+  - component: {fileID: 1094969884}
   m_Layer: 0
   m_Name: MenuDirector
   m_TagString: Untagged
@@ -16101,7 +16072,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SettingsManager
   soundFxVolume: 1
-  musicVolume: 0.7
+  musicSoundVolume: 0
+  sensitivity: 0
 --- !u!114 &1094969883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16116,6 +16088,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuOptions
   uiFader: {fileID: 2054652885}
   musicAudioSource: {fileID: 15805847}
+--- !u!114 &1094969884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094969877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8cf125479100ca4381769de017ebaea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SaveLoadManager
+  settingsDataFileName: settings.json
 --- !u!43 &1129510951
 Mesh:
   m_ObjectHideFlags: 0

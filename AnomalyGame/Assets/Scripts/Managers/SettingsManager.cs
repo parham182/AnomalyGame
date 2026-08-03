@@ -3,14 +3,14 @@ using UnityEngine;
 public class SettingsManager : MonoBehaviour
 {
     public static SettingsManager instance;
-    private void Awake() { instance = this; }
 
     public float soundFxVolume;
     public float musicSoundVolume;
     public float sensitivity;
 
-    private void Start()
+    private void Awake()
     {
+        instance = this;
         LoadData();
     }
 
