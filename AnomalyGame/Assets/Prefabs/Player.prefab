@@ -45,8 +45,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86778107e1b69d346b38726490c0f14a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraRotation
-  cameraSensY: 0.1
-  cameraSensX: 0.2
   playerBody: {fileID: 7220295175921783731}
   xClampMin: -90
   xClampMax: 90
@@ -167,6 +165,7 @@ MonoBehaviour:
   cameraRotation: {fileID: 155118089418981936}
   playerMovement: {fileID: 4523996093286571220}
   uiCanvas: {fileID: 0}
+  uiFader: {fileID: 0}
   hasPills: 0
 --- !u!114 &4523996093286571220
 MonoBehaviour:
@@ -185,6 +184,7 @@ MonoBehaviour:
   camHolder: {fileID: 8518254572057292471}
   camAnimator: {fileID: 3356628587333991956}
   gravity: -20
+  joystick: {fileID: 0}
   canMove: 1
 --- !u!114 &2139401515075037549
 MonoBehaviour:
@@ -423,8 +423,8 @@ Camera:
   m_GameObject: {fileID: 6567066072598941129}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
