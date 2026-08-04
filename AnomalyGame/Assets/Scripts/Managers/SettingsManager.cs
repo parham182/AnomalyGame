@@ -8,9 +8,10 @@ public class SettingsManager : MonoBehaviour
     public float musicSoundVolume;
     public float sensitivity;
 
-    private void Awake()
+    private void Awake() { instance = this; }
+
+    private void Start()
     {
-        instance = this;
         LoadData();
     }
 
@@ -35,3 +36,4 @@ public class SettingsManager : MonoBehaviour
         SaveLoadManager.singleton.Save(settingsData, SaveLoadManager.singleton.settingsDataFileName);
     }
 }
+

@@ -7,8 +7,9 @@ public class SoundManager : MonoBehaviour
     [SerializeField] AudioSource musicAudioSource;
     [SerializeField] AudioClip clickSound;
 
-    private void Start()
+    private IEnumerator Start()
     {
+        yield return null; 
         musicAudioSource.volume = SettingsManager.instance.musicSoundVolume;
     }
 
