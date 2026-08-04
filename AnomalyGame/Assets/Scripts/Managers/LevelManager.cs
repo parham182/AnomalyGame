@@ -1,11 +1,15 @@
 using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
     public Door bedroomDoor;
-    public GameObject[] houseList;
+    public List<GameObject> AllLevels = new List<GameObject>();
+    [SerializeField] private List<GameObject> ShowableLevels = new List<GameObject>();
+    [SerializeField] private List<GameObject> ShowedLevels = new List<GameObject>();
     public GameObject currentHouse;
     public GameObject DefaultHouse;
     public string selectedPill;
@@ -41,12 +45,13 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        currentHouse = houseList[0];
+        currentHouse = AllLevels[0];
+        ShowableLevels = new List<GameObject>(AllLevels);
     }
 
     public void ChangeLevel()
     {
-        foreach (GameObject house in houseList)
+        foreach (GameObject house in AllLevels)
         {
             house.SetActive(false);
         }
@@ -57,10 +62,14 @@ public class LevelManager : MonoBehaviour
         {
             do
             {
-                int randIndex = Random.Range(1, houseList.Length);
-                selectedHouse = houseList[randIndex];
+                int randIndex = Random.Range(1, ShowableLevels.Count);
+                selectedHouse = ShowableLevels[randIndex];
             }
-            while (selectedHouse == currentHouse && houseList.Length > 2);
+            while (selectedHouse == currentHouse && ShowableLevels.Count > 2);
+
+            // remove anomaly from ShowableLevels
+            ShowableLevels.Remove(selectedHouse);
+            ShowedLevels.Add(selectedHouse);
         }
         else
         {
@@ -97,7 +106,12 @@ public class LevelManager : MonoBehaviour
         } else
         {
             dayNumber = 0;
-            StartCoroutine(PlayJumpscare());
+            // StartCoroutine(PlayJumpscare());
+            StartCoroutine(ShowDayMessage());
+
+            // add removed anomalys
+            ShowableLevels = new List<GameObject>(AllLevels);
+            ShowedLevels.Clear();
         }
     }
 
