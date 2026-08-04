@@ -1,9 +1,10 @@
 using UnityEngine;
 
-public class StartPlayingGramaphoneSound : MonoBehaviour
+public class PictureFallAnomaly : MonoBehaviour
 {
-    [SerializeField] GramophoneRotate gramophoneRotate;
+    [SerializeField] Animator animator;
     [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip fallClip;
 
     private bool hasTriggerd = false;
     private bool canTrigger = false;
@@ -17,9 +18,7 @@ public class StartPlayingGramaphoneSound : MonoBehaviour
     {
         canTrigger = false;
         hasTriggerd = false;
-
-        gramophoneRotate.StopSpin();
-        audioSource.Stop();
+        animator.SetTrigger("Idle");
     }
 
     public void Trigger()
@@ -27,12 +26,12 @@ public class StartPlayingGramaphoneSound : MonoBehaviour
         if (hasTriggerd || canTrigger == false) return;
 
         hasTriggerd = true;
-        Invoke("PlayTrigger", 3);
+        animator.SetTrigger("Fall");
     }
 
-    private void PlayTrigger()
+    public void PlayFallSound()
     {
-        gramophoneRotate.StartSpin();
-        audioSource.Play();
+        audioSource.volume = SettingsManager.instance.soundFxVolume;
+        audioSource.PlayOneShot(fallClip);
     }
 }
