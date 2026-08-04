@@ -5,10 +5,8 @@ public class PlayerCollisionDetector : MonoBehaviour
 {
     public UnityEvent onAction;
 
-    int counter = 0;
     public void Execute()
     {
-        if (counter > 1) return;
        
         onAction?.Invoke();
     }
@@ -17,7 +15,6 @@ public class PlayerCollisionDetector : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            counter++;
             Execute();
         }
     }
