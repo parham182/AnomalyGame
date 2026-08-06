@@ -56,20 +56,20 @@ public class SlenderExample : MonoBehaviour
 
         //--------------
 
-        if (faceCh == true && timeFace < Time.time)
-        {
-            timeFaceCh += Time.deltaTime * 80;
-            if (timeFaceCh >= facepWeight * 2)
-            {
-                timeFaceCh = 0;
-                faceCh = true;
-                timeFace = Time.time + Random.Range(3.0f, 6.0f);
-                music.pitch = Random.Range(0.8f, 1.0f);
-            }
-            float var0 = Mathf.PingPong(timeFaceCh, facepWeight);
-            body.SetBlendShapeWeight(0, var0);
-            music.volume = var0 * 0.1f;
-        }
+        // if (faceCh == true && timeFace < Time.time)
+        // {
+        //     timeFaceCh += Time.deltaTime * 80;
+        //     if (timeFaceCh >= facepWeight * 2)
+        //     {
+        //         timeFaceCh = 0;
+        //         faceCh = true;
+        //         timeFace = Time.time + Random.Range(3.0f, 6.0f);
+        //         music.pitch = Random.Range(0.8f, 1.0f);
+        //     }
+        //     float var0 = Mathf.PingPong(timeFaceCh, facepWeight);
+        //     body.SetBlendShapeWeight(0, var0);
+        //     music.volume = var0 * 0.1f;
+        // }
 
         //--------------
     }
