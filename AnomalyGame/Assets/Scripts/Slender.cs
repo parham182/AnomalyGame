@@ -5,7 +5,6 @@ public class Slender : MonoBehaviour
 {
     [SerializeField] Animator animator;
     [SerializeField] AudioSource audioSource;
-    [SerializeField] AudioClip screamClip;
     [SerializeField] Transform jumpscareCameraPos;
 
     private void OnTriggerEnter(Collider collider)
