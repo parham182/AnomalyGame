@@ -2,21 +2,11 @@ using UnityEngine;
 
 public class SlenderTrigger : MonoBehaviour
 {
-    [SerializeField] AudioClip footSound;
     [SerializeField] AudioSource screamSound;
     [SerializeField] GameObject slender;
 
     private bool hasTriggerd = false;
     private bool canTrigger = false;
-
-    public bool canCloseDoor = false;
-
-    public static SlenderTrigger instance;
-
-    void Awake()
-    {
-        instance = this;
-    }
 
     void Start()
     {
@@ -32,28 +22,16 @@ public class SlenderTrigger : MonoBehaviour
     {
         canTrigger = false;
         hasTriggerd = false;
-        // footSound.Stop();
+        slender.SetActive(false);
         screamSound.Stop();
     }
 
     public void ActiveSlender()
     {
-        if (canTrigger || hasTriggerd) return;
-
-        slender.SetActive(true);
+        if (hasTriggerd || canTrigger == false) return;
 
         hasTriggerd = true;
-    }
-    public void PlayFootStep()
-    {
-        SoundManager.instance.PlaySoundEffect(footSound);
-    }
-    public void PlayScream()
-    {
+        slender.SetActive(true);
         screamSound.Play();
-    }
-    public void AnimationOver()
-    {
-        canCloseDoor = true;
     }
 }
