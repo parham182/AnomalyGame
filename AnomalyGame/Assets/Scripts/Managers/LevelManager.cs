@@ -83,7 +83,7 @@ public class LevelManager : MonoBehaviour
         bedroomDoor.isOpen = false;
     }
 
-    private IEnumerator ShowDayMessage()
+    public IEnumerator ShowDayMessage()
     {
         yield return new WaitForSeconds(2);
 

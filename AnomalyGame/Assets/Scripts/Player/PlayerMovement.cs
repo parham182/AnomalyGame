@@ -1,6 +1,4 @@
-using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -31,7 +29,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void playerMove()
     {
-        if (!canMove) return;
+        if (!canMove)
+        {
+            camAnimator.SetInteger("State", 1);
+            return;
+        }
         float speed = 0;
         
         Vector3 camForward = Quaternion.Euler(0, camHolder.eulerAngles.y, 0) * Vector3.forward;

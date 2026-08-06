@@ -1,20 +1,23 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
     [SerializeField] CameraRotation cameraRotation;
     [SerializeField] PlayerMovement playerMovement;
     [SerializeField] GameObject uiCanvas;
-    [SerializeField] UiFader uiFader;
+    public UiFader uiFader;
     
     public bool hasPills = false;
     public static Player instance;
+    private Vector3 startPos;
     
     private void Awake() { instance = this; }
 
     private void Start()
     {
         uiFader.FadeOut();
+        startPos = transform.position;
     }
     
     public void Sleep()
@@ -33,5 +36,10 @@ public class Player : MonoBehaviour
         playerMovement.canMove = true;
         cameraRotation.enable = true;
         uiCanvas.SetActive(true);
+    }
+
+    public void Respawn()
+    {
+        SceneManager.LoadScene(0);
     }
 }

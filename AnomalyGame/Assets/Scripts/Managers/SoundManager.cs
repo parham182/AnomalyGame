@@ -50,4 +50,20 @@ public class SoundManager : MonoBehaviour
         musicAudioSource.volume = 0f;
         musicAudioSource.Stop();
     }
+
+    public IEnumerator StopMusicSlowly(AudioSource audioSource, float fadeDuration = 1f)
+    {
+        float startVolume = audioSource.volume;
+        float elapsed = 0f;
+
+        while (elapsed < fadeDuration)
+        {
+            elapsed += Time.deltaTime;
+            audioSource.volume = Mathf.Lerp(startVolume, 0f, elapsed / fadeDuration);
+            yield return null;
+        }
+
+        audioSource.volume = 0f;
+        audioSource.Stop();
+    }
 }
