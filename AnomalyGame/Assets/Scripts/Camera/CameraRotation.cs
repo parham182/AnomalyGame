@@ -27,6 +27,8 @@ public class CameraRotation : MonoBehaviour
 
     void Update()
     {
+        if (PauseManager.Instance.IsPaused) return;
+        
         if (enable)
             HandleTouchInput();
     }
