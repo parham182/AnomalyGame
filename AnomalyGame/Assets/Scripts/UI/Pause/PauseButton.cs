@@ -9,7 +9,6 @@ public class PauseButton : MonoBehaviour
 
     [SerializeField] private Volume globalVolume;
 
-    private DepthOfField depthOfField;
 
     void Awake()
     {
@@ -17,14 +16,9 @@ public class PauseButton : MonoBehaviour
         pauseButton.onClick.AddListener(OnPauseClicked);
     }
 
-    private void Start()
-    {
-        globalVolume.profile.TryGet(out depthOfField);
-    }
 
     void OnPauseClicked()
     {
-        depthOfField.focusDistance.value = 0.01f;
         PauseManager.Instance.TogglePause();
     }
 
