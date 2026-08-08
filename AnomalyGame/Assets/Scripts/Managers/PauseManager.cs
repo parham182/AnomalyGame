@@ -6,7 +6,7 @@ public class PauseManager : MonoBehaviour
     public static PauseManager Instance;
     public GameObject pausePanel;
     public GameObject mainUi;
-    public bool IsPaused { get; private set; }
+    public bool IsPaused;
 
     void Awake()
     {

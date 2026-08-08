@@ -22,6 +22,7 @@ public class MainMenuOptions : MonoBehaviour
 
     public void OnOptionsClick()
     {
+        PauseManager.Instance.IsPaused = true;
         optionsBox.SetActive(true);
         uiCanvas.SetActive(false);
     }

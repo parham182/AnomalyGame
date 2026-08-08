@@ -12092,7 +12092,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1094969882}
         m_TargetAssemblyTypeName: SettingsManager, Assembly-CSharp
         m_MethodName: UpdateData
         m_Mode: 1
@@ -13092,7 +13092,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1094969882}
         m_TargetAssemblyTypeName: SettingsManager, Assembly-CSharp
         m_MethodName: UpdateData
         m_Mode: 1
@@ -17511,6 +17511,7 @@ GameObject:
   - component: {fileID: 1094969882}
   - component: {fileID: 1094969883}
   - component: {fileID: 1094969884}
+  - component: {fileID: 1094969885}
   m_Layer: 0
   m_Name: MenuDirector
   m_TagString: Untagged
@@ -17712,6 +17713,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SaveLoadManager
   settingsDataFileName: settings.json
+--- !u!114 &1094969885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094969877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e015799d6c9f09448002542216aa1ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PauseManager
+  ambianceSound: {fileID: 0}
+  pausePanel: {fileID: 0}
+  mainUi: {fileID: 0}
+  IsPaused: 0
 --- !u!43 &1129510951
 Mesh:
   m_ObjectHideFlags: 0
