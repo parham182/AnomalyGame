@@ -40,6 +40,6 @@ public class Player : MonoBehaviour
 
     public void Respawn()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 }
