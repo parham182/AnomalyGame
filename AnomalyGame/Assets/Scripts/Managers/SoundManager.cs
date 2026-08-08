@@ -16,6 +16,11 @@ public class SoundManager : MonoBehaviour
     public static SoundManager instance;
     private void Awake() { instance = this; }
 
+    public void UpdateSoundVolume()
+    {
+        musicAudioSource.volume = SettingsManager.instance.musicSoundVolume;
+    }
+
     public void PlaySoundEffect(AudioSource audioSource, AudioClip clip, float pitchChangeRatio = 0.05f)
     {
         audioSource.volume = SettingsManager.instance.soundFxVolume;

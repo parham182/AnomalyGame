@@ -1,7 +1,10 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SettingsManager : MonoBehaviour
 {
+    [SerializeField] Slider musicVolumeSlider;
+    [SerializeField] Slider sensitivitySlider;
     public static SettingsManager instance;
 
     public float soundFxVolume;
@@ -13,6 +16,7 @@ public class SettingsManager : MonoBehaviour
     private void Start()
     {
         LoadData();
+        SoundManager.instance.UpdateSoundVolume();
     }
 
     public void LoadData() {
@@ -24,6 +28,12 @@ public class SettingsManager : MonoBehaviour
         musicSoundVolume = settingsData.MusicSoundVolume;
         soundFxVolume = settingsData.SoundFxVolume;
         sensitivity = settingsData.Sensitivity;
+
+        if (sensitivitySlider != null && musicVolumeSlider != null)
+        {
+            sensitivitySlider.value = sensitivity;
+            musicVolumeSlider.value = musicSoundVolume;
+        }
     }
 
     public void SaveData()
@@ -34,6 +44,16 @@ public class SettingsManager : MonoBehaviour
         settingsData.Sensitivity = sensitivity;
 
         SaveLoadManager.singleton.Save(settingsData, SaveLoadManager.singleton.settingsDataFileName);
+        SoundManager.instance.UpdateSoundVolume();
+    }
+
+    public void UpdateData()
+    {
+        if (!PauseManager.Instance.IsPaused) return;
+
+        sensitivity = sensitivitySlider.value;
+        musicSoundVolume = musicVolumeSlider.value;
+        SoundManager.instance.UpdateSoundVolume();
     }
 }
 
