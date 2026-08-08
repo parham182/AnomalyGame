@@ -22,18 +22,18 @@ public class PauseManager : MonoBehaviour
     public void Pause()
     {
         IsPaused = true;
-        Time.timeScale = 0f;
+        // Time.timeScale = 0f;
         pausePanel.SetActive(true);
         mainUi.SetActive(false);
-        ambianceSound.Pause();
+        // ambianceSound.Pause();
     }
 
     public void Resume()
     {
         IsPaused = false;
-        Time.timeScale = 1f;
+        // Time.timeScale = 1f;
         pausePanel.SetActive(false);
         mainUi.SetActive(true);
-        ambianceSound.Play();
+        // ambianceSound.Play();
     }
 }

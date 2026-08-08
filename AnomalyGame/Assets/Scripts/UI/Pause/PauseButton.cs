@@ -1,12 +1,9 @@
 using UnityEngine;
-using UnityEngine.Rendering;
-using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
 public class PauseButton : MonoBehaviour
 {
     private Button pauseButton;
-
 
     void Awake()
     {
@@ -14,9 +11,9 @@ public class PauseButton : MonoBehaviour
         pauseButton.onClick.AddListener(OnPauseClicked);
     }
 
-
     void OnPauseClicked()
     {
+        SoundManager.instance.PlayClickSound();
         PauseManager.Instance.TogglePause();
     }
 
