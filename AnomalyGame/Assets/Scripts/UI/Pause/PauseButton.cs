@@ -7,8 +7,6 @@ public class PauseButton : MonoBehaviour
 {
     private Button pauseButton;
 
-    [SerializeField] private Volume globalVolume;
-
 
     void Awake()
     {
