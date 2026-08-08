@@ -5,6 +5,8 @@ public class MainMenuOptions : MonoBehaviour
 {
     [SerializeField] UiFader uiFader;
     [SerializeField] AudioSource musicAudioSource;
+    [SerializeField] GameObject optionsBox;
+    [SerializeField] GameObject uiCanvas;
 
     private void Start()
     {
@@ -18,7 +20,11 @@ public class MainMenuOptions : MonoBehaviour
         Invoke(nameof(ChangeScene), 1.5f);
     }
 
-    public void OnOptionsClick() {}
+    public void OnOptionsClick()
+    {
+        optionsBox.SetActive(true);
+        uiCanvas.SetActive(false);
+    }
 
     public void OnAboutUsClick() {}
 

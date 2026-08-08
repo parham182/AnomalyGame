@@ -56,4 +56,3 @@ public class SettingsManager : MonoBehaviour
         SoundManager.instance.UpdateSoundVolume();
     }
 }
-
