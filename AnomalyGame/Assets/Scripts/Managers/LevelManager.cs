@@ -11,6 +11,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private List<GameObject> ShowedLevels = new List<GameObject>();
     public GameObject currentHouse;
     public GameObject DefaultHouse;
+    public GameObject EndHouse;
     public string selectedPill;
     public int dayNumber = 0;
     [SerializeField] GameObject pillsPrefab;
@@ -50,6 +51,24 @@ public class LevelManager : MonoBehaviour
 
         GameObject selectedHouse;
 
+        print(dayNumber == DayNumberTextMessages.Length - 2);
+        // print(CorrectPill(currentHouse == DefaultHouse ? "BLUE" : "RED"));
+
+        if (dayNumber == DayNumberTextMessages.Length - 2 
+            && CorrectPill(currentHouse == DefaultHouse ? "BLUE" : "RED")) // its end game
+        {
+            selectedHouse = EndHouse;
+
+            selectedHouse.SetActive(true);
+            dayNumber += 1;
+            StartCoroutine(ShowDayMessageWithoutPill());
+            currentHouse = selectedHouse;
+            Player.instance.hasPills = false;
+            bedroomDoor.isOpen = false;
+            
+            return;
+        }
+
         if (Random.value <= anomalyChance)
         {
             do
@@ -88,9 +107,21 @@ public class LevelManager : MonoBehaviour
         uiFader.FadeOut(2);
     }
 
+    public IEnumerator ShowDayMessageWithoutPill()
+    {
+        yield return new WaitForSeconds(2);
+
+        NotifManager.instance.ShowNotif(DayNumberTextMessages[dayNumber], 3);
+        SoundManager.instance.PlaySoundEffect(impactCinematicClip, 0);
+        // Instantiate(pillsPrefab, pillsSpawnPoint.position, pillsSpawnPoint.rotation);
+
+        yield return new WaitForSeconds(3);
+        uiFader.FadeOut(2);
+    }
+
     private void WinLoseCheck(string correctPill)
     {
-        print("selectedPill: " + selectedPill + "--correctPill: " + correctPill);
+        // print("selectedPill: " + selectedPill + "--correctPill: " + correctPill);
         if (selectedPill == correctPill)
         {
             dayNumber += 1;
@@ -105,6 +136,11 @@ public class LevelManager : MonoBehaviour
             ShowableLevels = new List<GameObject>(AllLevels);
             ShowedLevels.Clear();
         }
+    }
+
+    private bool CorrectPill(string correctPill)
+    {
+        return selectedPill == correctPill;
     }
 
     private IEnumerator PlayJumpscare()
