@@ -19,7 +19,6 @@ public class DoorCloseAnomaly : MonoBehaviour
     private bool hasTriggerd = false;
     private bool canTrigger = false;
 
-
     private void OnEnable()
     {
         canTrigger = true;
