@@ -5,7 +5,7 @@ public class EndgameCutsceneDirector : MonoBehaviour
     [SerializeField] Transform cameraPos;
     [SerializeField] GameObject slender;
     [SerializeField] GameObject messageCanvas;
-
+    [SerializeField] float timer = 2f;
     public void Trigger()
     {
         // disable controllers
@@ -23,7 +23,7 @@ public class EndgameCutsceneDirector : MonoBehaviour
     public void FadeIn()
     {
         Player.instance.uiFader.FadeIn(0.25f);
-        Invoke("FadeOut", 2f);
+        Invoke("FadeOut", timer);
     }
 
     private void FadeOut()
