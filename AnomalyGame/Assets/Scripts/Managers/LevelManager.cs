@@ -88,7 +88,7 @@ public class LevelManager : MonoBehaviour
             // remove anomaly from ShowableLevels
             ShowableLevels.Remove(selectedHouse);
             ShowedLevels.Add(selectedHouse);
-            anomalyChance -= 0.15f;
+            anomalyChance -= 0.1f;
         }
         else
         {
