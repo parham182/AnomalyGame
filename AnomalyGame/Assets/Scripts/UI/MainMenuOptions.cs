@@ -39,7 +39,7 @@ public class MainMenuOptions : MonoBehaviour
 
     private void ChangeScene()
     {
-        SceneManager.LoadScene("GameLoop");
+        SceneManager.LoadScene(1);
     }
 
     private void ExitGame()

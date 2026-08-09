@@ -9,7 +9,7 @@ public class Pills : MonoBehaviour, IInteractable
     {
         Player.instance.hasPills = true;
         SoundManager.instance.PlaySoundEffect(takePill);
-        NotifManager.instance.ShowNotif("قرص های خواب", 3);
+        // NotifManager.instance.ShowNotif("قرص های خواب", 3);
         Destroy(gameObject);
     }
 }

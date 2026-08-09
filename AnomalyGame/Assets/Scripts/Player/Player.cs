@@ -16,7 +16,6 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        uiFader.FadeOut();
         startPos = transform.position;
     }
     

@@ -42,6 +42,11 @@ public class LevelManager : MonoBehaviour
         ShowableLevels = new List<GameObject>(AllLevels);
     }
 
+    private void OnEnable()
+    {
+        StartCoroutine(ShowDayMessageWithoutPillNoDelay());
+    }
+
     public void ChangeLevel()
     {
         foreach (GameObject house in AllLevels)
@@ -51,7 +56,7 @@ public class LevelManager : MonoBehaviour
 
         GameObject selectedHouse;
 
-        print(dayNumber == DayNumberTextMessages.Length - 2);
+        // print(dayNumber == DayNumberTextMessages.Length - 2);
         // print(CorrectPill(currentHouse == DefaultHouse ? "BLUE" : "RED"));
 
         if (dayNumber == DayNumberTextMessages.Length - 2 
@@ -110,6 +115,18 @@ public class LevelManager : MonoBehaviour
     public IEnumerator ShowDayMessageWithoutPill()
     {
         yield return new WaitForSeconds(2);
+
+        NotifManager.instance.ShowNotif(DayNumberTextMessages[dayNumber], 3);
+        SoundManager.instance.PlaySoundEffect(impactCinematicClip, 0);
+        // Instantiate(pillsPrefab, pillsSpawnPoint.position, pillsSpawnPoint.rotation);
+
+        yield return new WaitForSeconds(3);
+        uiFader.FadeOut(2);
+    }
+
+    public IEnumerator ShowDayMessageWithoutPillNoDelay()
+    {
+        // yield return new WaitForSeconds(2);
 
         NotifManager.instance.ShowNotif(DayNumberTextMessages[dayNumber], 3);
         SoundManager.instance.PlaySoundEffect(impactCinematicClip, 0);
