@@ -22,7 +22,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] UiFader uiFader;
 
     [Range(0f, 1f)]
-    [SerializeField] private float anomalyChance = 0.7f;
+    [SerializeField] private float defaultAnomalyChance;
+    [SerializeField] private float anomalyChance;
 
     [Header("Jumpscare stuff")]
     [SerializeField] GameObject jumpscareImageObject;
@@ -40,6 +41,7 @@ public class LevelManager : MonoBehaviour
     {
         currentHouse = AllLevels[0];
         ShowableLevels = new List<GameObject>(AllLevels);
+        anomalyChance = defaultAnomalyChance;
     }
 
     private void OnEnable()
@@ -86,10 +88,15 @@ public class LevelManager : MonoBehaviour
             // remove anomaly from ShowableLevels
             ShowableLevels.Remove(selectedHouse);
             ShowedLevels.Add(selectedHouse);
+            anomalyChance -= 0.1f;
         }
         else
         {
             selectedHouse = DefaultHouse;
+            if (anomalyChance < defaultAnomalyChance)
+                anomalyChance = defaultAnomalyChance;
+            else 
+                anomalyChance += 0.1f;
         }
 
         selectedHouse.SetActive(true);
@@ -126,7 +133,7 @@ public class LevelManager : MonoBehaviour
 
     public IEnumerator ShowDayMessageWithoutPillNoDelay()
     {
-        // yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(2);
 
         NotifManager.instance.ShowNotif(DayNumberTextMessages[dayNumber], 3);
         SoundManager.instance.PlaySoundEffect(impactCinematicClip, 0);
