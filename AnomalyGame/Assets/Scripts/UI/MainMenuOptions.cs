@@ -9,6 +9,8 @@ public class MainMenuOptions : MonoBehaviour
     [SerializeField] GameObject tutorialBox;
     [SerializeField] GameObject uiCanvas;
 
+    private bool hasStarted = false;
+
     private void Start()
     {
         uiFader.FadeOut();
@@ -16,6 +18,9 @@ public class MainMenuOptions : MonoBehaviour
 
     public void OnStartClick()
     {
+        if (hasStarted) return;
+
+        hasStarted = true;
         uiFader.FadeIn(1);
         StartCoroutine(SoundManager.instance.StopMusicSlowly());
         Invoke(nameof(ChangeScene), 1.5f);
