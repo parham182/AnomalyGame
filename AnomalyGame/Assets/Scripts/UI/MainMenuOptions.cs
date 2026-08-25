@@ -6,6 +6,7 @@ public class MainMenuOptions : MonoBehaviour
     [SerializeField] UiFader uiFader;
     [SerializeField] AudioSource musicAudioSource;
     [SerializeField] GameObject optionsBox;
+    [SerializeField] GameObject tutorialBox;
     [SerializeField] GameObject uiCanvas;
 
     private void Start()
@@ -29,21 +30,20 @@ public class MainMenuOptions : MonoBehaviour
 
     public void OnAboutUsClick() {}
 
-    public void OnExitGameClick()
+    public void OnTutorialClick()
     {
-        uiFader.FadeIn(0.4f);
-        StartCoroutine(SoundManager.instance.StopMusicSlowly(0.4f));
+        tutorialBox.SetActive(true);
+        uiCanvas.SetActive(false);
+    }
 
-        Invoke(nameof(ExitGame), 0.5f);
+    public void OnBackTutorialClick()
+    {
+        uiCanvas.SetActive(true);
+        tutorialBox.SetActive(false);
     }
 
     private void ChangeScene()
     {
         SceneManager.LoadScene(1);
-    }
-
-    private void ExitGame()
-    {
-        Application.Quit();
     }
 }
