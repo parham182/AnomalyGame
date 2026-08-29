@@ -7,7 +7,9 @@ public class MainMenuOptions : MonoBehaviour
     [SerializeField] AudioSource musicAudioSource;
     [SerializeField] GameObject optionsBox;
     [SerializeField] GameObject tutorialBox;
+    [SerializeField] GameObject aboutusBox;
     [SerializeField] GameObject uiCanvas;
+
 
     private bool hasStarted = false;
 
@@ -33,7 +35,11 @@ public class MainMenuOptions : MonoBehaviour
         uiCanvas.SetActive(false);
     }
 
-    public void OnAboutUsClick() {}
+    public void OnAboutUsClick()
+    {
+        aboutusBox.SetActive(true);
+        uiCanvas.SetActive(false);
+    }
 
     public void OnTutorialClick()
     {
@@ -47,6 +53,11 @@ public class MainMenuOptions : MonoBehaviour
         tutorialBox.SetActive(false);
     }
 
+    public void OnnBackAboutUsClick()
+    {
+        aboutusBox.SetActive(false);
+        uiCanvas.SetActive(true);
+    }
     private void ChangeScene()
     {
         SceneManager.LoadScene(1);
