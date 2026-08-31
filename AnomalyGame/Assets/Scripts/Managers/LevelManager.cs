@@ -35,6 +35,8 @@ public class LevelManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 60;
     }
 
     private void Start()
@@ -61,7 +63,7 @@ public class LevelManager : MonoBehaviour
         // print(dayNumber == DayNumberTextMessages.Length - 2);
         // print(CorrectPill(currentHouse == DefaultHouse ? "BLUE" : "RED"));
 
-        if (dayNumber == DayNumberTextMessages.Length - 2 
+        if (dayNumber == DayNumberTextMessages.Length - 2
             && CorrectPill(currentHouse == DefaultHouse ? "BLUE" : "RED")) // its end game
         {
             selectedHouse = EndHouse;
@@ -72,7 +74,7 @@ public class LevelManager : MonoBehaviour
             currentHouse = selectedHouse;
             Player.instance.hasPills = false;
             bedroomDoor.isOpen = false;
-            
+
             return;
         }
 
@@ -95,7 +97,7 @@ public class LevelManager : MonoBehaviour
             selectedHouse = DefaultHouse;
             if (anomalyChance < defaultAnomalyChance)
                 anomalyChance = defaultAnomalyChance;
-            else 
+            else
                 anomalyChance += 0.1f;
         }
 
@@ -150,7 +152,8 @@ public class LevelManager : MonoBehaviour
         {
             dayNumber += 1;
             StartCoroutine(ShowDayMessage());
-        } else
+        }
+        else
         {
             dayNumber = 0;
             // StartCoroutine(PlayJumpscare());

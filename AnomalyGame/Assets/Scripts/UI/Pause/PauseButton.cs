@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class PauseButton : MonoBehaviour
 {
     private Button pauseButton;
-
+    
     void Awake()
     {
         pauseButton = GetComponent<Button>();
