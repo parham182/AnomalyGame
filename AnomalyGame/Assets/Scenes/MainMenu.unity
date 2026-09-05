@@ -18480,7 +18480,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -25.9}
+  m_AnchoredPosition: {x: 0, y: -25.900024}
   m_SizeDelta: {x: 320.588, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1005384653
@@ -18503,7 +18503,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uFEA9\uFEB3\uFE98\uFEEE\uFEAD\uFECB\uFEE4\uFEDE"
+  m_text: "\uFEA9\uFEB3\uFE98\uFEEE\uFEAD\uFE8D\uFEDF\uFECC\uFEE4\uFEDE"
   m_isRightToLeft: 1
   m_fontAsset: {fileID: 11400000, guid: 4c4fe91cda0e0fb49ad31fe1043d45b1, type: 2}
   m_sharedMaterial: {fileID: -6412699718946534468, guid: 4c4fe91cda0e0fb49ad31fe1043d45b1, type: 2}
@@ -18577,7 +18577,7 @@ MonoBehaviour:
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
   preserveNumbers: 0
   farsi: 1
-  originalText: "\u062F\u0633\u062A\u0648\u0631\u0639\u0645\u0644"
+  originalText: "\u062F\u0633\u062A\u0648\u0631\u0627\u0644\u0639\u0645\u0644"
   fixTags: 1
   forceFix: 0
 --- !u!222 &1005384654
@@ -40204,7 +40204,9 @@ MonoBehaviour:
     \uFED7\uFEAE\uFEB9 \uFE81\uFE91\uFBFD \uFEAD\uFE8D \uFE91\uFEA8\uFEEE\uFEAD.\_\uFE8D\uFB94\uFEAE
     \uFB7C\uFBFF\uFEB0\uFBFC \uFE97\uFED0\uFBFF\uFBFF\uFEAE \uFB90\uFEAE\uFEA9\uFEE9
     \uFE91\uFEEE\uFEA9\u060C \uFED7\uFEAE\uFEB9 \uFED7\uFEAE\uFEE3\uFEB0 \uFEAD\uFE8D
-    \uFE91\uFEA8\uFEEE\uFEAD.\r\n"
+    \uFE91\uFEA8\uFEEE\uFEAD. \uFE8D\uFBFE\uFEE6 \uFB7C\uFEAE\uFEA7\uFEEA \uFEAD\uFEED
+    \uFE97\uFE8E \uFEA9\uFEE9 \uFEAD\uFEED\uFEAF \uFE8D\uFEA9\uFE8D\uFEE3\uFEEA \uFE91\uFEAA\uFEE9
+    \uFE97\uFE8E \uFE81\uFEAF\uFE8D\uFEA9 \uFE91\uFEB8\uFBFD\r\n"
   m_isRightToLeft: 1
   m_fontAsset: {fileID: 11400000, guid: 4c4fe91cda0e0fb49ad31fe1043d45b1, type: 2}
   m_sharedMaterial: {fileID: -6412699718946534468, guid: 4c4fe91cda0e0fb49ad31fe1043d45b1, type: 2}
@@ -40295,7 +40297,9 @@ MonoBehaviour:
     \u0642\u0631\u0635 \u0622\u0628\u06CC \u0631\u0627 \u0628\u062E\u0648\u0631.\_\u0627\u06AF\u0631
     \u0686\u06CC\u0632\u06CC \u062A\u063A\u06CC\u06CC\u0631 \u06A9\u0631\u062F\u0647
     \u0628\u0648\u062F\u060C \u0642\u0631\u0635 \u0642\u0631\u0645\u0632 \u0631\u0627
-    \u0628\u062E\u0648\u0631.\r\n"
+    \u0628\u062E\u0648\u0631. \u0627\u06CC\u0646 \u0686\u0631\u062E\u0647 \u0631\u0648
+    \u062A\u0627 \u062F\u0647 \u0631\u0648\u0632 \u0627\u062F\u0627\u0645\u0647 \u0628\u062F\u0647
+    \u062A\u0627 \u0622\u0632\u0627\u062F \u0628\u0634\u06CC\r\n"
   fixTags: 1
   forceFix: 0
 --- !u!222 &1593475696
@@ -41313,7 +41317,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1670052328
 MonoBehaviour:
   m_ObjectHideFlags: 0
